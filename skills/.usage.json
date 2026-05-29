@@ -1,0 +1,54 @@
+{
+  "daily-market-news": {
+    "archived_at": null,
+    "created_at": "2026-05-25T09:46:00.664053+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-05-25T09:46:00.664053+00:00",
+    "last_used_at": "2026-05-26T03:44:31.942136+00:00",
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 3,
+    "view_count": 0
+  },
+  "multi-agent-pipeline-orchestration": {
+    "archived_at": null,
+    "created_at": "2026-05-25T08:18:57.369787+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-05-25T08:20:59.740573+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "wealth-management-pipeline": {
+    "archived_at": null,
+    "created_at": "2026-05-25T08:47:53.761845+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "weekly-wealth-analysis": {
+    "archived_at": null,
+    "created_at": "2026-05-25T09:46:01.752309+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-05-25T09:46:01.752309+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  }
+}
