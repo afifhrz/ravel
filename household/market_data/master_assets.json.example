@@ -1,0 +1,19 @@
+{
+  "stocks": {
+    "unit": "lot",
+    "multiplier": 100,
+    "holdings": [
+      {"code": "TICKER1", "qty": 10, "avg_price": 1000.00},
+      {"code": "TICKER2", "qty": 20, "avg_price": 2000.00}
+    ]
+  },
+  "mutual_funds": [
+    {"name": "Fund Name Here", "units": 1000.0000, "market_value": 1000000}
+  ],
+  "gold": [
+    {"buy_price": 900000.0, "weight_gram": 5.0, "date": "2019-01-01"}
+  ],
+  "currency": [
+    {"fund": "USD", "avg_nav": 16000.0, "current_nav": 16000.0, "unit": 100.0, "market_value": 1600000.0}
+  ]
+}

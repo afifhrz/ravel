@@ -1,0 +1,213 @@
+{
+  "week_start": "2026-05-25",
+  "week_end": "2026-05-29",
+  "days": [
+    {
+      "date": "2026-05-25",
+      "headlines": [
+        {
+          "headline": "Prabowo's Export Overhaul Triggers JCI Slide",
+          "summary": "Government plan to centralize commodity exports through a state-designated company creates pricing uncertainty for private exporters.",
+          "sentiment": "Bearish",
+          "url": "https://jakartaglobe.id"
+        },
+        {
+          "headline": "Heavy Foreign Outflows Pressure Indonesian Equities",
+          "summary": "JCI dropped 8.35% in a week as foreign investors pull capital, seeking support at the 6,100 level.",
+          "sentiment": "Bearish",
+          "url": "https://tempo.co"
+        },
+        {
+          "headline": "USD/IDR Stability Tied to US-Iran De-escalation",
+          "summary": "Rupiah remains range-bound around 17,700 as markets await geopolitical clarity in the Middle East.",
+          "sentiment": "Neutral",
+          "url": "https://fxstreet.com"
+        }
+      ],
+      "ticker_news": {
+        "ADRO": [
+          {
+            "headline": "Strong Q1 Performance and Strategic Pivot",
+            "summary": "Earnings per share beat estimates by 16% with a focus on spinning off thermal coal arm (AADI) to diversify into renewables.",
+            "sentiment": "Bullish",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "PTBA": [
+          {
+            "headline": "Q1 Profit Jumps 105%",
+            "summary": "Net profit doubled to IDR 801.79 billion driven by cost discipline and favorable state-miner export regulations.",
+            "sentiment": "Bullish",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "ASII": [
+          {
+            "headline": "Automotive Market Share Compression",
+            "summary": "Car market share slipped to 49% in Q1 2026 due to intensifying competition and a soft mass-market segment.",
+            "sentiment": "Bearish",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "SIDO": [
+          {
+            "headline": "Q1 Net Profit Drops 36.8%",
+            "summary": "Profitability hit by more selective consumer spending patterns in the health and wellness segment.",
+            "sentiment": "Bearish",
+            "url": "https://pojokpapu.com"
+          }
+        ],
+        "AADI": [
+          {
+            "headline": "Spin-off from ADRO Focuses on Thermal Coal",
+            "summary": "Separation aims to streamline the parent company's transition to green energy while maintaining cash flows from coal.",
+            "sentiment": "Neutral",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "UNTR": [
+          {
+            "headline": "No Immediate Plans for Stock Split",
+            "summary": "Management maintains current share structure despite volatility in the mining machinery segment.",
+            "sentiment": "Neutral",
+            "url": "https://babelinsight.com"
+          }
+        ],
+        "IKBI": [],
+        "RIGS": [],
+        "MYOH": [],
+        "KMDS": []
+      },
+      "prices": {
+        "IDX": {
+          "ADRO": 2310.0,
+          "PTBA": 2840.0,
+          "AADI": 8300.0,
+          "IKBI": 525.0,
+          "RIGS": 685.0,
+          "ASII": 5575.0,
+          "UNTR": 24625.0,
+          "MYOH": 1150.0,
+          "KMDS": 555.0,
+          "SIDO": 408.0
+        },
+        "forex": {
+          "USD_IDR": 17742.0,
+          "GBP_IDR": 23935.08,
+          "CNY_IDR": 2611.13,
+          "SGD_IDR": 13800.01
+        },
+        "commodities": {
+          "GOLD_USD": 4556.19
+        }
+      }
+    },
+    {
+      "date": "2026-05-26",
+      "headlines": [
+        {
+          "headline": "JCI Continues Slide as Foreign Outflows Persist",
+          "summary": "Indonesian equities remain under pressure continuing last week's 8.35% decline; investors monitor 6,100 support level for signs of stabilization.",
+          "sentiment": "Bearish",
+          "url": "https://finance.detik.com"
+        },
+        {
+          "headline": "Commodity Export Policy Uncertainty Weighs on Mining Sector",
+          "summary": "Prabowo's centralized export plan continues to create headwinds for coal and resource exporters; policy clarity expected in coming weeks.",
+          "sentiment": "Bearish",
+          "url": "https://jakartaglobe.id"
+        },
+        {
+          "headline": "Gold Holds Near Record Levels Above $4,500",
+          "summary": "Safe-haven demand persists on geopolitical uncertainty; gold remains elevated above $4,500/oz as Middle East tensions and trade policy shifts drive portfolio hedging.",
+          "sentiment": "Bullish",
+          "url": "https://reuters.com"
+        },
+        {
+          "headline": "Rupiah Consolidates Around 17,700 Level",
+          "summary": "USD/IDR remains range-bound near recent averages; Bank Indonesia's reserves and US-Iran developments remain key watchpoints for FX direction.",
+          "sentiment": "Neutral",
+          "url": "https://fxstreet.com"
+        }
+      ],
+      "ticker_news": {
+        "ADRO": [
+          {
+            "headline": "Monitoring Renewables Spin-off Progress",
+            "summary": "ADRO's diversified Q1 performance underpins the strategic pivot; investors watching AADI separation timeline and renewable project pipeline.",
+            "sentiment": "Neutral",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "PTBA": [
+          {
+            "headline": "Strong Q1; Policy Headwinds Remain",
+            "summary": "Despite doubled Q1 profit, centralized export policy could affect future revenue streams for the state-affiliated miner.",
+            "sentiment": "Neutral",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "ASII": [
+          {
+            "headline": "EV Competition Intensifies in ASEAN",
+            "summary": "Chinese EV manufacturers gaining share in ASEAN; ASII's 49% car market share faces structural pressure from lower-cost electric competitors.",
+            "sentiment": "Bearish",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "SIDO": [
+          {
+            "headline": "Consumer Spending Tightness Continues",
+            "summary": "Selective consumer behavior in health and wellness segment continues to pressure margins; Q2 outlook cautious.",
+            "sentiment": "Bearish",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "AADI": [
+          {
+            "headline": "Thermal Coal Arm Seeks Independent Footing",
+            "summary": "Post-spin-off AADI working to establish standalone operations; coal prices and ADRO parent relationship remain key variables.",
+            "sentiment": "Neutral",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "UNTR": [
+          {
+            "headline": "Mining Machinery Demand Stable",
+            "summary": "No structural changes at UNTR; equipment orders holding steady amid broader mining sector uncertainty.",
+            "sentiment": "Neutral",
+            "url": "https://google.com/finance"
+          }
+        ],
+        "IKBI": [],
+        "RIGS": [],
+        "MYOH": [],
+        "KMDS": []
+      },
+      "prices": {
+        "IDX": {
+          "ADRO": 2310.0,
+          "PTBA": 2840.0,
+          "AADI": 8300.0,
+          "IKBI": 525.0,
+          "RIGS": 685.0,
+          "ASII": 5575.0,
+          "UNTR": 24625.0,
+          "MYOH": 1150.0,
+          "KMDS": 555.0,
+          "SIDO": 408.0
+        },
+        "forex": {
+          "USD_IDR": 17742.0,
+          "GBP_IDR": 23935.08,
+          "CNY_IDR": 2611.13,
+          "SGD_IDR": 13800.01
+        },
+        "commodities": {
+          "GOLD_USD": 4556.19
+        }
+      },
+      "price_note": "Prices carried forward from 2026-05-25 close; live market data unavailable due to scraping infrastructure issue."
+    }
+  ]
+}

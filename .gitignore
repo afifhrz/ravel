@@ -1,0 +1,49 @@
+# Runtime state & locks
+gateway_state.json
+state.db
+state.db-shm
+state.db-wal
+auth.lock
+.update_check
+interrupt_debug.log
+.hermes_history
+pairing/
+
+# Secrets & environment
+.env
+
+# Personal financial data
+household/market_data/master_assets.json
+
+# Caches
+cache/
+audio_cache/
+image_cache/
+models_dev_cache.json
+ollama_cloud_models_cache.json
+
+# Logs
+logs/
+
+# Cron runtime
+cron/output/
+cron/.tick.lock
+
+# Sessions
+sessions/
+
+# Pastes (ephemeral)
+pastes/
+
+# Sandboxes
+sandboxes/
+
+# Config backups
+config.yaml.bak.*
+
+# LSP generated binaries
+lsp/bin/
+lsp/node_modules/
+household/talent_forge/outputs/arc_exclusive_cover_letter.md
+household/talent_forge/outputs/stellar_ai_cover_letter.md
+household/talent_forge/outputs/upstart_cover_letter.md

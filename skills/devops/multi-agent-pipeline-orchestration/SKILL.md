@@ -6,67 +6,54 @@ description: Orchestrate multi-agent financial data pipelines — delegate scrap
 # Multi-Agent Pipeline Orchestration
 
 ## Trigger Conditions
-
-Use this skill when:
-- User asks to "run the pipeline", "get market data", "analyze portfolio", or similar financial data workflows
+- User asks to "run the pipeline", "get market data", "analyze portfolio", or similar
 - User references empulso, rubeeo, or other named sub-agents by role
-- A task requires delegating to 2+ sub-agents and synthesizing their output
+- A task requires delegating to 2+ sub-agents and synthesizing output
+- Scheduled cron runs for daily news or weekly analysis
+
+## Output Directory
+All pipeline outputs go under:
+`C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\market_data\`
+
+Key files:
+- `master_assets.json` — Full wealth stack (stocks in lots, funds, gold, currency)
+- `live_data.json` — Empulso's scraped market data
+- `curated_news.json` — Today's news snapshot
+- `weekly_news_archive.json` — Accumulated weekly news (refreshed each Monday)
+- `strategic_analysis_v2.md` — Rubeeo's full professional report
+- `AGENTS.md` — Persona/rule definitions for Empulso and Rubeeo
+
+## Agent Roles
+- **empulso**: Market data + news scraper. Saves to JSON.
+- **rubeeo**: Strategic fundamental analyst. Produces markdown reports.
+- **ravel** (main agent): Orchestrates, collects results, delivers to Telegram.
 
 ## Pipeline Pattern
 
-### 1. Gather Inputs
+### 1. Check Memory First
+- Portfolio path, delivery channel, and agent output paths are stored in memory across sessions.
+- **Never ask for the portfolio path** — retrieve from memory.
 
-- **Portfolio file**: Check memory for the portfolio path. Default: `C:\Users\afifs\market_data\portfolio.csv`
-- **Delivery target**: Check memory for the user's preferred delivery channel (e.g., Telegram). If not configured, ask once and save to memory.
-- **Agent roles**:
-  - **empulso**: Market data scraper — scrapes live stock/gold/currency data, saves to JSON
-  - **rubeeo**: Quantitative analyst — reads scraped data + portfolio, produces analysis report
+### 2. Delegate Tasks
+Use `delegate_task` to spawn agents in **parallel** where possible:
+- Empulso always runs (data collection).
+- Rubeeo polls for Empulso's output file if run in parallel, or runs sequentially after.
 
-### 2. Spawn Agents in Parallel
-
-Use `delegate_task` to spawn both agents concurrently:
-
-**empulso task**:
-- Goal: Scrape live market data for all tickers in the portfolio CSV
-- Output file: `C:\Users\afifs\market_data\live_data.json`
-- Include: current price, day high/low, volume, change %, 52w high/low, market cap
-- Also scrape: USD/IDR, gold USD, IDX composite
-- Toolsets: `["web", "browser", "terminal", "file"]`
-
-**rubeeo task**:
-- Goal: Deep quantitative analysis on the scraped data
-- Input files: portfolio CSV + live_data.json (empulso output)
-- Output file: `C:\Users\afifs\market_data\analysis_report.md`
-- Sections: Portfolio valuation, technical/momentum analysis, risk assessment, buy/sell/hold recommendations, market context
-- Toolsets: `["web", "browser", "terminal", "file"]`
-
-### 3. Collect and Deliver
-
-After both agents complete:
-1. Read the analysis report from the output file
-2. **Send a summarized version to the user's preferred channel** (e.g., Telegram) via `send_message`
-3. Also present the summary in the current session
-
-The Telegram summary should be concise — key metrics, top movers, recommendations — not the full report. Link to or note the full report path for reference.
-
-## Output File Convention
-
-All pipeline outputs go under `C:\Users\afifs\market_data\`:
-- `portfolio.csv` — user's holdings (CODE, QTY, AVG_PRICE, LAST_PRICE)
-- `live_data.json` — empulso's scraped market data
-- `analysis_report.md` — rubeeo's full analysis
+### 3. Delivery (Critical)
+The user expects **proactive Telegram delivery**, not just in-session output.
+- **News**: Send a concise "Morning Brief" with clickable source URLs.
+- **Reports**: Always attach the full `.md` file as a **native Telegram document**.
+- **Summaries**: Concise — key metrics, top movers, 3-5 action items.
 
 ## Pitfalls
+- **Don't ask for paths every session** — check memory.
+- **Don't execute scraping/analysis yourself** — always delegate.
+- **Don't paste long markdown into Telegram** — attach as file.
+- **Don't send news without URLs** — every item needs a clickable source link.
+- **Don't skip memory updates** — after config changes, save to memory immediately.
 
-- **Don't ask for the portfolio path every session** — check memory first, only ask if not found
-- **Don't execute scraping/analysis yourself** — always delegate to the specialized sub-agents
-- **Always deliver to Telegram** (or the user's saved preferred channel) — the user expects proactive delivery, not just in-session output
-- **Spawn agents in parallel**, not sequentially — empulso and rubeeo are independent (rubeeo polls for empulso's output file)
-- **Save durable facts to memory** after the first run (portfolio path, delivery preferences, agent output paths)
-
-## Verification
-
-After pipeline completes:
-- Confirm `live_data.json` exists and contains data for all tickers
-- Confirm `analysis_report.md` exists and has all 5 sections
-- Confirm Telegram message was sent (check for errors in `send_message` response)
+## Browser/Chrome Crashes on Windows
+If `browser_navigate` fails with "Chrome exited early" or "DevToolsActivePort":
+- Fix: add `--no-sandbox --disable-gpu --disable-dev-shm-usage` to `browser.args` in config.yaml.
+- Use Python's `yaml` module to write the list (hermes config set serializes as string).
+- Chromium is at `C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe`.

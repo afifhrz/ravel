@@ -1,0 +1,21 @@
+User wants to test the full pipeline: empulso scrapes stock data → rubeeo does deep analysis → report sent to user.
+§
+After empulso + rubeeo pipeline completes, Ravel (main agent) must send the summarized report to Telegram. This is the primary delivery channel.
+§
+Portfolio Pipeline V2: 
+1. Empulso: Scrapes live data + market news. News $\rightarrow$ Ravel $\rightarrow$ Telegram.
+2. Rubeeo: Long-term fundamental analysis of master_assets.json (Stocks in LOTS, Mutual Funds, Gold, Currency). Integrates news into asset reallocation advice.
+3. Ravel: Delivers both News and Analysis to Telegram.
+Asset Master File: C:\Users\afifs\market_data\master_assets.json
+§
+Wealth Management System Path: C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\market_data. This contains master_assets.json, AGENTS.md, and the portfolio pipeline files.
+§
+Delivery Preferences: 
+1. Strategic Analysis must be sent as a file attachment (MEDIA:path) to Telegram.
+2. Curated News must include clickable URLs for every item.
+§
+Subagent 'talent_forge' handles global remote job scraping (LinkedIn, WWR, etc.) and CV tailoring. Main CV: G:\My Drive\Dokumen Persyaratan Umum\CV\Ahmad_Afif_Aulia_Hariz_CV_Main.pdf. Delivery via Telegram.
+§
+D: drive MSYS path is /d/ not D:/. Use /d/ prefix for all D: drive access. Terminal with bash/MSYS converts D: to /d/.
+§
+Browser Chrome crash fix for Windows: If browser_navigate fails with "Chrome exited early / DevToolsActivePort", add browser args via Python yaml module: config.setdefault("browser", {})["args"] = ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox"]. hermes config set serializes as string (broken). Chromium at C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe.

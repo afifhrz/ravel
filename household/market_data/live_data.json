@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-25T15:40:00Z",
+  "prices": {
+    "IDX": {
+      "ADRO": 2310.0,
+      "PTBA": 2840.0,
+      "AADI": 8300.0,
+      "IKBI": 525.0,
+      "RIGS": 685.0,
+      "ASII": 5575.0,
+      "UNTR": 24625.0,
+      "MYOH": 1150.0,
+      "KMDS": 555.0,
+      "SIDO": 408.0
+    },
+    "forex": {
+      "USD_IDR": 17742.0,
+      "GBP_IDR": 23935.08,
+      "CNY_IDR": 2611.13,
+      "SGD_IDR": 13800.01
+    },
+    "commodities": {
+      "GOLD_USD": 4556.19
+    }
+  }
+}
