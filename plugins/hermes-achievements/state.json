@@ -1,9 +1,24 @@
 {
   "unlocks": {
+    "browser_possession": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1780066951
+    },
     "provider_polyglot": {
       "evidence": null,
       "first_tier": "Copper",
       "unlocked_at": 1779696257
+    },
+    "subagent_commander": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1780066951
+    },
+    "test_suite_tamer": {
+      "evidence": null,
+      "first_tier": "Copper",
+      "unlocked_at": 1780066951
     }
   }
 }

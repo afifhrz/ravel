@@ -47,3 +47,5 @@ lsp/node_modules/
 household/talent_forge/outputs/arc_exclusive_cover_letter.md
 household/talent_forge/outputs/stellar_ai_cover_letter.md
 household/talent_forge/outputs/upstart_cover_letter.md
+gateway.pid
+gateway.lock
