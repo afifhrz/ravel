@@ -18,4 +18,6 @@ Subagent 'talent_forge' handles global remote job scraping (LinkedIn, WWR, etc.)
 §
 D: drive MSYS path is /d/ not D:/. Use /d/ prefix for all D: drive access. Terminal with bash/MSYS converts D: to /d/.
 §
-Browser Chrome crash fix for Windows: If browser_navigate fails with "Chrome exited early / DevToolsActivePort", add browser args via Python yaml module: config.setdefault("browser", {})["args"] = ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox"]. hermes config set serializes as string (broken). Chromium at C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe.
+Browser Chrome crash fix for Windows: If browser_navigate fails with "Chrome exited early / DevToolsActivePort", add browser args via Python yaml module. Chromium at C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe.
+
+Indonesian news scraping: detik.com search most reliable. Use browser_console JS extraction for full article text. Direct URLs on kompas/cnnindonesia/cnbcindonesia frequently 404 — use tag pages or site search. Google blocks automated access — go to news sites directly.

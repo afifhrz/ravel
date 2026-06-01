@@ -17,6 +17,7 @@ To provide a high-fidelity, long-term fundamental wealth management pipeline tha
     - `live_data.json`: Precise current pricing.
     - `curated_news.json`: High-impact news with Sentiment (Bullish/Bearish/Neutral) and Source URLs.
     - **URL Precision Rule:** Every news item's `url` field must be the **direct link to the specific article** (e.g., `https://www.cnbcindonesia.com/market/2026/06/01/...`). Do NOT use generic domains (`https://finance.yahoo.com`), category pages (`https://finance.yahoo.com/quote/ADRO.JK/`), or homepage URLs. If scraping cannot find the exact article link, use `"url": "NOT_FOUND"` — never fabricate a URL.
+    - **RECENCY RULE: Only scrape and curate news published within the current quarter (last 90 days).** Anything older is structurally stale and must not be used as evidence for trading decisions. When searching, always append date filters (e.g., `after:2026-03-01` for Q2 2026). If a source only returns articles older than 90 days, discard them and note "No recent coverage found" rather than using outdated material.
 - **Persona:** Efficient, precise, and skeptical of "hype." Focused on raw, verifiable data.
 
 ---

@@ -1,16 +1,42 @@
 {
+  "asset-research": {
+    "archived_at": null,
+    "created_at": "2026-06-01T09:08:34.088028+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-01T09:30:02.955609+00:00",
+    "last_used_at": "2026-06-01T09:19:24.095358+00:00",
+    "last_viewed_at": "2026-06-01T09:19:24.079695+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
   "daily-market-news": {
     "archived_at": null,
     "created_at": "2026-05-25T09:46:00.664053+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-01T05:03:07.181980+00:00",
-    "last_used_at": "2026-06-01T05:02:27.177745+00:00",
-    "last_viewed_at": "2026-06-01T05:02:27.163504+00:00",
-    "patch_count": 3,
+    "last_patched_at": "2026-06-01T09:12:17.712897+00:00",
+    "last_used_at": "2026-06-01T09:28:52.359981+00:00",
+    "last_viewed_at": "2026-06-01T09:28:52.346057+00:00",
+    "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 8,
-    "view_count": 3
+    "use_count": 12,
+    "view_count": 7
+  },
+  "indonesian-news-scraping": {
+    "archived_at": null,
+    "created_at": "2026-06-01T10:08:18.651827+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-01T10:24:02.951709+00:00",
+    "last_used_at": "2026-06-01T10:21:36.564402+00:00",
+    "last_viewed_at": "2026-06-01T10:21:36.564402+00:00",
+    "patch_count": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
   },
   "multi-agent-pipeline-orchestration": {
     "archived_at": null,
@@ -24,6 +50,19 @@
     "state": "active",
     "use_count": 3,
     "view_count": 3
+  },
+  "talent-forge-workflow": {
+    "archived_at": null,
+    "created_at": "2026-06-01T09:28:49.451425+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-01T09:47:56.948383+00:00",
+    "last_viewed_at": "2026-06-01T09:46:15.254260+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 3,
+    "view_count": 1
   },
   "wealth-management-pipeline": {
     "archived_at": null,
@@ -42,13 +81,13 @@
     "archived_at": null,
     "created_at": "2026-05-25T09:46:01.752309+00:00",
     "created_by": null,
-    "last_patched_at": "2026-05-29T14:37:10.821313+00:00",
-    "last_used_at": "2026-06-01T05:23:33.423246+00:00",
-    "last_viewed_at": "2026-06-01T03:54:58.983369+00:00",
-    "patch_count": 2,
+    "last_patched_at": "2026-06-01T09:29:05.958911+00:00",
+    "last_used_at": "2026-06-01T09:30:11.366952+00:00",
+    "last_viewed_at": "2026-06-01T09:30:11.351636+00:00",
+    "patch_count": 5,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 2
+    "use_count": 6,
+    "view_count": 5
   }
 }

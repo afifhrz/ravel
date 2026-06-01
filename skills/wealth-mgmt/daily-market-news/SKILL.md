@@ -13,6 +13,7 @@ Scheduled daily at 07:00 WIB.
     - IDX Tickers (ADRO, PTBA, AADI, IKBI, RIGS, ASII, UNTR, MYOH, KMDS, SIDO).
     - Global Macro trends affecting Gold and Currencies (GBP, CNY, SGD).
     - **CRITICAL: Every news item must include the DIRECT ARTICLE URL** — the full link to the specific news page (e.g., `https://finance.yahoo.com/news/adro-stock-rises-today-1234567890.html`), NOT a generic domain (`https://finance.yahoo.com`), NOT a quote page (`https://finance.yahoo.com/quote/ADRO.JK/`), and NOT a category page (`https://www.cnbcindonesia.com/market`). If no article URL can be found, mark the source as `"url": "NOT_FOUND"` and do NOT fabricate a URL.
+    - **RECENCY RULE: Only include news published within the current quarter (last 90 days).** Anything older is stale and must be discarded. For daily news, prefer items from the last 1-3 days. For weekly analysis, the entire weekly archive should only contain items from the current week. If a search result points to an article older than 90 days, skip it and search again with a date filter.
 2. **Persistence (Archive Mode)**: 
     - Instead of overwriting, **APPEND** today's curated news to `weekly_news_archive.json`.
     - If it is Monday, start a fresh archive for the new week.
@@ -28,3 +29,6 @@ Scheduled daily at 07:00 WIB.
 - Verify Telegram message contains today's material items with clickable links.
 - Verify archive starts fresh each Monday.
 - **Verify all URLs are direct article links** — reject any URL that is just a domain root or category page (e.g., `finance.yahoo.com` without a `/news/...` path, or `cnbcindonesia.com/market` without a specific article slug).
+
+## Related Skills
+- For ad-hoc deep research on specific assets (e.g., "give me evidence for SIDO"), use the `asset-research` skill.
