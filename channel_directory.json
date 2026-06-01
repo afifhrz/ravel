@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-29T21:58:46.532424",
+  "updated_at": "2026-06-01T12:57:44.409089",
   "platforms": {
     "telegram": [
       {
         "id": "1834361059",
         "name": "Afif Hariz",
         "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-1003802639803",
+        "name": "hermes-agent",
+        "type": "channel",
         "thread_id": null
       }
     ],

@@ -49,3 +49,8 @@ household/talent_forge/outputs/stellar_ai_cover_letter.md
 household/talent_forge/outputs/upstart_cover_letter.md
 gateway.pid
 gateway.lock
+skills/.curator_backups/2026-06-01T03-53-07Z/cron-jobs.json
+skills/.curator_backups/2026-06-01T03-53-07Z/manifest.json
+skills/.curator_backups/2026-06-01T03-53-07Z/skills.tar.gz
+skills/.archive/multi-agent-pipeline-orchestration/SKILL.md
+skills/.archive/multi-agent-pipeline-orchestration/references/agent-task-templates.md

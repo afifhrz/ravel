@@ -1,213 +1,158 @@
 {
-  "week_start": "2026-05-25",
-  "week_end": "2026-05-29",
+  "week_start": "2026-06-01",
+  "week_end": "2026-06-05",
   "days": [
     {
-      "date": "2026-05-25",
+      "date": "2026-06-01",
       "headlines": [
         {
-          "headline": "Prabowo's Export Overhaul Triggers JCI Slide",
-          "summary": "Government plan to centralize commodity exports through a state-designated company creates pricing uncertainty for private exporters.",
-          "sentiment": "Bearish",
-          "url": "https://jakartaglobe.id"
-        },
-        {
-          "headline": "Heavy Foreign Outflows Pressure Indonesian Equities",
-          "summary": "JCI dropped 8.35% in a week as foreign investors pull capital, seeking support at the 6,100 level.",
-          "sentiment": "Bearish",
-          "url": "https://tempo.co"
-        },
-        {
-          "headline": "USD/IDR Stability Tied to US-Iran De-escalation",
-          "summary": "Rupiah remains range-bound around 17,700 as markets await geopolitical clarity in the Middle East.",
+          "headline": "IHSG Flat at 6,127 as Markets Await Fresh Catalysts",
+          "summary": "Jakarta Composite Index drifts at 6,127 (-0.05%) with subdued trading on Monday. The LQ45 slipped 1.49% and IDX 30 fell 1.85%, reflecting continued caution from foreign outflow signals.",
           "sentiment": "Neutral",
-          "url": "https://fxstreet.com"
-        }
-      ],
-      "ticker_news": {
-        "ADRO": [
-          {
-            "headline": "Strong Q1 Performance and Strategic Pivot",
-            "summary": "Earnings per share beat estimates by 16% with a focus on spinning off thermal coal arm (AADI) to diversify into renewables.",
-            "sentiment": "Bullish",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "PTBA": [
-          {
-            "headline": "Q1 Profit Jumps 105%",
-            "summary": "Net profit doubled to IDR 801.79 billion driven by cost discipline and favorable state-miner export regulations.",
-            "sentiment": "Bullish",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "ASII": [
-          {
-            "headline": "Automotive Market Share Compression",
-            "summary": "Car market share slipped to 49% in Q1 2026 due to intensifying competition and a soft mass-market segment.",
-            "sentiment": "Bearish",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "SIDO": [
-          {
-            "headline": "Q1 Net Profit Drops 36.8%",
-            "summary": "Profitability hit by more selective consumer spending patterns in the health and wellness segment.",
-            "sentiment": "Bearish",
-            "url": "https://pojokpapu.com"
-          }
-        ],
-        "AADI": [
-          {
-            "headline": "Spin-off from ADRO Focuses on Thermal Coal",
-            "summary": "Separation aims to streamline the parent company's transition to green energy while maintaining cash flows from coal.",
-            "sentiment": "Neutral",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "UNTR": [
-          {
-            "headline": "No Immediate Plans for Stock Split",
-            "summary": "Management maintains current share structure despite volatility in the mining machinery segment.",
-            "sentiment": "Neutral",
-            "url": "https://babelinsight.com"
-          }
-        ],
-        "IKBI": [],
-        "RIGS": [],
-        "MYOH": [],
-        "KMDS": []
-      },
-      "prices": {
-        "IDX": {
-          "ADRO": 2310.0,
-          "PTBA": 2840.0,
-          "AADI": 8300.0,
-          "IKBI": 525.0,
-          "RIGS": 685.0,
-          "ASII": 5575.0,
-          "UNTR": 24625.0,
-          "MYOH": 1150.0,
-          "KMDS": 555.0,
-          "SIDO": 408.0
-        },
-        "forex": {
-          "USD_IDR": 17742.0,
-          "GBP_IDR": 23935.08,
-          "CNY_IDR": 2611.13,
-          "SGD_IDR": 13800.01
-        },
-        "commodities": {
-          "GOLD_USD": 4556.19
-        }
-      }
-    },
-    {
-      "date": "2026-05-26",
-      "headlines": [
-        {
-          "headline": "JCI Continues Slide as Foreign Outflows Persist",
-          "summary": "Indonesian equities remain under pressure continuing last week's 8.35% decline; investors monitor 6,100 support level for signs of stabilization.",
-          "sentiment": "Bearish",
-          "url": "https://finance.detik.com"
+          "url": "https://www.cnbcindonesia.com/market"
         },
         {
-          "headline": "Commodity Export Policy Uncertainty Weighs on Mining Sector",
-          "summary": "Prabowo's centralized export plan continues to create headwinds for coal and resource exporters; policy clarity expected in coming weeks.",
-          "sentiment": "Bearish",
-          "url": "https://jakartaglobe.id"
-        },
-        {
-          "headline": "Gold Holds Near Record Levels Above $4,500",
-          "summary": "Safe-haven demand persists on geopolitical uncertainty; gold remains elevated above $4,500/oz as Middle East tensions and trade policy shifts drive portfolio hedging.",
+          "headline": "Oil Markets Face Structural Headwinds Even if US-Iran De-escalate",
+          "summary": "Analysts warn Strait of Hormuz shipping disruptions have caused lasting damage to oil supply chains. Recovery could take months even with a geopolitical ceasefire, keeping crude prices elevated.",
           "sentiment": "Bullish",
-          "url": "https://reuters.com"
+          "url": "https://www.cnbcindonesia.com/market"
         },
         {
-          "headline": "Rupiah Consolidates Around 17,700 Level",
-          "summary": "USD/IDR remains range-bound near recent averages; Bank Indonesia's reserves and US-Iran developments remain key watchpoints for FX direction.",
+          "headline": "Government Revises Danantara Regulation — Key Points for Investors",
+          "summary": "The Indonesian government issued revised implementing regulations for the Danantara sovereign wealth fund. Changes include governance provisions and operational guidelines that could affect state-owned enterprise performance.",
           "sentiment": "Neutral",
-          "url": "https://fxstreet.com"
+          "url": "https://www.cnbcindonesia.com/market"
+        },
+        {
+          "headline": "Gold Retreats from Records — Down 0.8% at $4,555/oz",
+          "summary": "Gold pulled back sharply from recent highs, dropping to $4,555 as traders took profits and US equity futures held firm. Support remains strong on geopolitical hedging demand.",
+          "sentiment": "Bearish",
+          "url": "https://finance.yahoo.com"
+        },
+        {
+          "headline": "US Stock Futures Edge Higher After May Record Close",
+          "summary": "S&P 500 futures +0.26%, Dow +0.14%, Nasdaq +0.49% as markets head into June following a strong May. VIX at 15.32 (-2.67%) signals low volatility expectations.",
+          "sentiment": "Bullish",
+          "url": "https://finance.yahoo.com"
+        },
+        {
+          "headline": "Rupiah Weakens to 17,878 per USD — Highest Level This Year",
+          "summary": "USD/IDR at 17,878, nearing the 52-week high of 17,899. Minister Purbaya maintains confidence the weakening hasn't disrupted the real economy, but FX pressure persists.",
+          "sentiment": "Bearish",
+          "url": "https://finance.yahoo.com/quote/IDR=X/"
         }
       ],
       "ticker_news": {
         "ADRO": [
           {
-            "headline": "Monitoring Renewables Spin-off Progress",
-            "summary": "ADRO's diversified Q1 performance underpins the strategic pivot; investors watching AADI separation timeline and renewable project pipeline.",
+            "headline": "ADRO Holds at 2,300 — Awaiting Renewables Pivot Clarity",
+            "summary": "Alamtri Resources flat at IDR 2,300. Key watchpoints: progress on AADI spin-off thermal coal separation and the green energy transition roadmap.",
             "sentiment": "Neutral",
-            "url": "https://google.com/finance"
+            "url": "https://finance.yahoo.com/quote/ADRO.JK/"
           }
         ],
         "PTBA": [
           {
-            "headline": "Strong Q1; Policy Headwinds Remain",
-            "summary": "Despite doubled Q1 profit, centralized export policy could affect future revenue streams for the state-affiliated miner.",
-            "sentiment": "Neutral",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "ASII": [
-          {
-            "headline": "EV Competition Intensifies in ASEAN",
-            "summary": "Chinese EV manufacturers gaining share in ASEAN; ASII's 49% car market share faces structural pressure from lower-cost electric competitors.",
+            "headline": "PTBA Drops 2.11% to 2,780 — Export Policy Overhang",
+            "summary": "Bukit Asam fell to IDR 2,780 despite strong Q1 earnings. The centralized commodity export policy continues to weigh on the mining sector outlook.",
             "sentiment": "Bearish",
-            "url": "https://google.com/finance"
-          }
-        ],
-        "SIDO": [
-          {
-            "headline": "Consumer Spending Tightness Continues",
-            "summary": "Selective consumer behavior in health and wellness segment continues to pressure margins; Q2 outlook cautious.",
-            "sentiment": "Bearish",
-            "url": "https://google.com/finance"
+            "url": "https://finance.yahoo.com/quote/PTBA.JK/"
           }
         ],
         "AADI": [
           {
-            "headline": "Thermal Coal Arm Seeks Independent Footing",
-            "summary": "Post-spin-off AADI working to establish standalone operations; coal prices and ADRO parent relationship remain key variables.",
-            "sentiment": "Neutral",
-            "url": "https://google.com/finance"
+            "headline": "AADI Gains 0.90% to 8,400 — Post-Spin-off Momentum",
+            "summary": "Adaro Andalan Indonesia rose to IDR 8,400. The thermal coal standalone entity is finding its footing after separation from parent ADRO.",
+            "sentiment": "Bullish",
+            "url": "https://finance.yahoo.com/quote/AADI.JK/"
+          }
+        ],
+        "IKBI": [
+          {
+            "headline": "IKBI Falls 2.91% to 500 — Selling Pressure on Small Caps",
+            "summary": "Sumi Indo Kabel declined to IDR 500. Small-cap names remain vulnerable to foreign outflows. 52-week range: 360-685.",
+            "sentiment": "Bearish",
+            "url": "https://finance.yahoo.com/quote/IKBI.JK/"
+          }
+        ],
+        "RIGS": [
+          {
+            "headline": "RIGS Tumbles 5.04% to 660 — Worst Decliner in Coverage",
+            "summary": "Rig Tenders Indonesia dropped sharply to IDR 660 on thin trading volume (92,700 shares vs 96,498 avg). Oil & gas sector sentiment fragile amid Strait of Hormuz concerns.",
+            "sentiment": "Bearish",
+            "url": "https://finance.yahoo.com/quote/RIGS.JK/"
+          }
+        ],
+        "ASII": [
+          {
+            "headline": "ASII Slides 2.44% to 5,000 — Automotive Sector Under Stress",
+            "summary": "Astra International at IDR 5,000, nearing its 52-week low of 4,400. Market share compression continues as Chinese EV competition intensifies in ASEAN.",
+            "sentiment": "Bearish",
+            "url": "https://finance.yahoo.com/quote/ASII.JK/"
           }
         ],
         "UNTR": [
           {
-            "headline": "Mining Machinery Demand Stable",
-            "summary": "No structural changes at UNTR; equipment orders holding steady amid broader mining sector uncertainty.",
-            "sentiment": "Neutral",
-            "url": "https://google.com/finance"
+            "headline": "UNTR Down 3.68% to 22,925 — Mining Machinery Weakness",
+            "summary": "United Tractors fell sharply to IDR 22,925. At 52-week low territory (20,900-32,825 range). The stock split denial and mining sector uncertainty add pressure.",
+            "sentiment": "Bearish",
+            "url": "https://finance.yahoo.com/quote/UNTR.JK/"
           }
         ],
-        "IKBI": [],
-        "RIGS": [],
-        "MYOH": [],
-        "KMDS": []
+        "MYOH": [
+          {
+            "headline": "MYOH Dips 2.09% to 1,170 — Volatile Session, Wide Range",
+            "summary": "Samindo Resources traded in a wide 1,170-1,250 range before settling at IDR 1,170. Company announced a cash dividend with ex-date June 4, 2026.",
+            "sentiment": "Neutral",
+            "url": "https://finance.yahoo.com/quote/MYOH.JK/"
+          }
+        ],
+        "KMDS": [
+          {
+            "headline": "KMDS Flat at 560 — Sideways After Recent Decline",
+            "summary": "Kurniamitra Duta Sentosa unchanged at IDR 560. Trading volume light at 115,000 vs 194,620 average. The stock is near the lower end of its 52-week range (520-750).",
+            "sentiment": "Neutral",
+            "url": "https://finance.yahoo.com/quote/KMDS.JK/"
+          }
+        ],
+        "SIDO": [
+          {
+            "headline": "SIDO Plunges 4.95% to 384 — Near 52-Week Low",
+            "summary": "Sido Muncul dropped to IDR 384 on heavy volume (179M shares), approaching its 52-week low of 378. Consumer spending selectivity in health & wellness continues to hurt.",
+            "sentiment": "Bearish",
+            "url": "https://finance.yahoo.com/quote/SIDO.JK/"
+          }
+        ]
       },
       "prices": {
         "IDX": {
-          "ADRO": 2310.0,
-          "PTBA": 2840.0,
-          "AADI": 8300.0,
-          "IKBI": 525.0,
-          "RIGS": 685.0,
-          "ASII": 5575.0,
-          "UNTR": 24625.0,
-          "MYOH": 1150.0,
-          "KMDS": 555.0,
-          "SIDO": 408.0
+          "ADRO": 2300.0,
+          "PTBA": 2780.0,
+          "AADI": 8400.0,
+          "IKBI": 500.0,
+          "RIGS": 660.0,
+          "ASII": 5000.0,
+          "UNTR": 22925.0,
+          "MYOH": 1170.0,
+          "KMDS": 560.0,
+          "SIDO": 384.0
         },
         "forex": {
-          "USD_IDR": 17742.0,
-          "GBP_IDR": 23935.08,
-          "CNY_IDR": 2611.13,
-          "SGD_IDR": 13800.01
+          "USD_IDR": 17878.0,
+          "GBP_IDR": 24053.0,
+          "CNY_IDR": 2641.7,
+          "SGD_IDR": 13990.59
         },
         "commodities": {
-          "GOLD_USD": 4556.19
+          "GOLD_USD": 4555.0
+        },
+        "indices": {
+          "IHSG": 6127.38,
+          "LQ45": 611.17
         }
       },
-      "price_note": "Prices carried forward from 2026-05-25 close; live market data unavailable due to scraping infrastructure issue."
+      "price_note": "Prices as of May 29 close (last trading day). June 1 is a holiday (Pancasila Day). Market reopens Tuesday June 2.",
+      "data_sources": "Yahoo Finance, CNBC Indonesia"
     }
   ]
 }

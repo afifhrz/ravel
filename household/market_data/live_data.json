@@ -1,26 +1,28 @@
 {
-  "timestamp": "2026-05-25T15:40:00Z",
-  "prices": {
-    "IDX": {
-      "ADRO": 2310.0,
-      "PTBA": 2840.0,
-      "AADI": 8300.0,
-      "IKBI": 525.0,
-      "RIGS": 685.0,
-      "ASII": 5575.0,
-      "UNTR": 24625.0,
-      "MYOH": 1150.0,
-      "KMDS": 555.0,
-      "SIDO": 408.0
-    },
-    "forex": {
-      "USD_IDR": 17742.0,
-      "GBP_IDR": 23935.08,
-      "CNY_IDR": 2611.13,
-      "SGD_IDR": 13800.01
-    },
-    "commodities": {
-      "GOLD_USD": 4556.19
-    }
-  }
+  "scrape_date": "2026-06-01",
+  "stocks": {
+    "ADRO": 2300.0,
+    "PTBA": 2780.0,
+    "AADI": 8400.0,
+    "IKBI": 500.0,
+    "RIGS": 660.0,
+    "ASII": 5000.0,
+    "UNTR": 22925.0,
+    "MYOH": 1170.0,
+    "KMDS": 560.0,
+    "SIDO": 384.0
+  },
+  "forex": {
+    "USD_IDR": 17878.0,
+    "GBP_IDR": 24038.76,
+    "CNY_IDR": 2641.9,
+    "SGD_IDR": 13993.595
+  },
+  "gold_usd_per_oz": 4552.1,
+  "gold_idr_per_gram": 2616504.37,
+  "indices": {
+    "IHSG": 6127.381
+  },
+  "data_source": "Yahoo Finance API v8",
+  "note": "Prices as of Yahoo Finance delayed quote. Market closed June 1 (Pancasila Day holiday). Last trading day prices from May 29 close."
 }

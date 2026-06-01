@@ -1,9 +1,9 @@
 {
-  "last_report_path": null,
-  "last_run_at": "2026-05-24T16:02:10.132121+00:00",
-  "last_run_duration_seconds": null,
-  "last_run_summary": "deferred first run — curator seeded, will run after one interval; use `hermes curator run --dry-run` to preview now",
+  "last_report_path": "C:\\Users\\afifs\\AppData\\Local\\hermes\\profiles\\ravel\\logs\\curator\\20260601-035307",
+  "last_run_at": "2026-06-01T03:53:07.507740+00:00",
+  "last_run_duration_seconds": 695.191728,
+  "last_run_summary": "auto: no changes; llm: Everything looks good. Only 1 consolidation was possible given just 2 agent-created skills, but it's a clean one — two overlapping skills describing the same pipeline have been merged into a single umbrella.\n\n---\n\n## Summary\n\nWith only 2 ag…\narchived 1 skill(s):\n  • multi-agent-pipeline-orchestration → wealth-management-pipeline\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin wealth-management-pipeline",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 0
+  "run_count": 1
 }

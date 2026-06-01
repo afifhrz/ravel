@@ -67,6 +67,24 @@ When the user requests an ad-hoc run:
 - **Weekly News Trend:** Sunday's analysis MUST reference the week's accumulated news, not just same-day data.
 - **File Attachment:** Always use Telegram file attachment for the full report, never inline markdown dumps.
 
+## Memorized Context (Memory-First Rule)
+
+- Portfolio path, delivery channel, and agent output paths are stored in memory across sessions.
+- **Never ask for the portfolio path** — retrieve from memory at the start of each run.
+- After any config changes, save to memory immediately.
+
+## Browser/Chrome Crash Fix on Windows
+
+If `browser_navigate` fails with "Chrome exited early" or "DevToolsActivePort":
+- Add `--no-sandbox --disable-gpu --disable-dev-shm-usage` to `browser.args` in config.yaml.
+- Use Python's `yaml` module to write the list (`hermes config set` serializes as string).
+- Chromium is at `C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe`.
+
+## Agent Task Templates
+
+For Empulso and Rubeeo `delegate_task` goal templates, see:
+`references/agent-task-templates.md` — includes full `delegate_task` parameter blocks and goal prompts for the scraper and analyst roles.
+
 ## Related Skills
 - `daily-market-news` — Step-by-step daily news workflow
 - `weekly-wealth-analysis` — Step-by-step weekly analysis workflow
