@@ -13,8 +13,9 @@ This skill defines the procedure for identifying global remote opportunities and
 
 ## Procedure
 1. **Information Retrieval**
-   - Load the user's main CV from `G:\My Drive\Dokumen Persyaratan Umum\CV\Ahmad_Afif_Aulia_Hariz_CV_Main.pdf`.
-   - Use `ocr-and-documents` skill if the PDF needs text extraction.
+   - **PRIMARY**: Read the user's CV text from `C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\talent_forge\cv_text.txt`. This is a pre-extracted plain-text version of the main CV — fast and reliable.
+   - **FALLBACK**: If `cv_text.txt` is missing or empty, load the main CV PDF from `G:\My Drive\Dokumen Persyaratan Umum\CV\Ahmad_Afif_Aulia_Hariz_CV_Main.pdf` and extract text using the `ocr-and-documents` skill. Also save the extracted text back to `cv_text.txt` for future runs.
+   - The CV contains: Profile summary, Key Skills (C#, Python, Java, Go, PHP, JavaScript, React, TypeScript, .NET, Spring Boot, Django, FastAPI, Kafka, Temporal, Redis, AWS, Kubernetes, Docker, etc.), and Professional Experience at The Software Practice (Singapore), Samsung R&D Indonesia, PSN, etc.
 
 2. **Multi-Portal Search**
    - **WeWorkRemotely**: Search for "Remote" categories.

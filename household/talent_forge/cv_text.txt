@@ -1,0 +1,85 @@
+Ahmad Afif Aulia Hariz
+ahmadafif.hariz@gmail.com |  https://www.linkedin.com/in/afifhrz/ | https://github.com/afifhrz | https://afifhrz.github.io/
+________________________________________
+Profile
+Full-Stack Software Engineer with 5+ years of experience designing and building scalable, high-performance applications across distributed systems, microservices, and user-facing platforms. Proven ability to deliver end-to-end solutions—from frontend interfaces and API design to backend services and production deployment such as supporting high-traffic, mission-critical systems.
+Strong expertise in Python, .NET, and Java, combined with hands-on experience in React, TypeScript, and modern frontend development. Experienced in event-driven architectures, real-time data processing, and cloud-native infrastructure (AWS, Kubernetes, Docker).
+Passionate about building reliable, performant, and maintainable systems, with a strong focus on system scalability, frontend responsiveness, and engineering efficiency in distributed teams.
+________________________________________
+Key Skills
+•	Languages: C#, Python, Java, Go, PHP, JavaScript 
+•	Frontend Development: React, TypeScript, JavaScript, Alpine.js, component-based architecture, state management (Context API), REST API integration, responsive UI development, frontend performance optimization (lazy loading, rendering optimization)
+•	Backend Development: Java (Spring Boot), .NET / ASP.NET Core, Python (Django, FastAPI, Flask), Laravel (PHP), RESTful API design, gRPC
+•	Distributed Systems & Event Streaming: Kafka, Temporal, Redis, Actor Model, Event-Driven Architecture, SQS/SNS 
+•	Databases & Storage: PostgreSQL, MySQL, SQL Server, FoundationDB, Amazon Aurora, Redis, Elasticsearch 
+•	Cloud & DevOps: AWS (SQS, SNS, Aurora, Elastic Beanstalk), Docker, Kubernetes, Helm, CI/CD (GitHub Actions), Linux 
+•	Testing & Quality Engineering: Playwright (E2E automation), test sharding, regression pipelines, unit & integration testing 
+•	System Design & Architecture: Scalable system design, clean architecture, SOLID principles, performance optimization, high-availability systems 
+•	Observability & Reliability: Logging, monitoring (ELK stack), debugging, root-cause analysis, production incident handling, LGTM stack
+________________________________________
+Professional Experience
+The Software Practice Pte Ltd – Software Engineer
+Feb 2026 – Present | Singapore Construction Payment Platform (Full-Stack Engineer)
+•	Contributed to frontend-facing features by designing efficient API contracts and improving client-side performance and responsiveness through optimized data delivery.
+•	Owned development and evolution of a distributed construction payment platform across multiple microservices, including invoice APIs, manual billing, email notifications, and integrations with Workday and DBS Bank APIs, supporting thousands of daily transactions. 
+•	Designed and implemented event-driven workflows using AWS SQS and SNS, improving system reliability and enabling asynchronous processing with >99.9% message delivery success rate. 
+•	Secured and managed database access to Amazon Aurora via bastion architecture, ensuring compliance with production security standards while supporting zero data exposure incidents. 
+•	Built and optimized automated regression testing framework using Playwright, introducing test sharding and CI pipeline integration, reducing test execution time by ~60% and improving test stability significantly. 
+•	Led root cause analysis and production issue resolution, reducing recurring defects by ~40% and maintaining near zero-downtime availability for critical payment services.
+ 
+Feb 2025 – Feb 2026 | Singapore Land Authority V2 Application
+•	Delivered end-to-end features for large-scale government land administration systems, collaborating across frontend and backend layers to support high-volume transactional workflows. 
+•	Designed and optimized backend services using EF Core, improving query performance by ~4× across millions of records, enabling faster data access for critical user operations. 
+•	Refactored legacy services into a clean, modular architecture following SOLID principles, significantly improving code maintainability, scalability, and onboarding speed for new features. 
+•	Increased unit test coverage from 60% to 85%, strengthening system reliability and reduced production defects. 
+•	Collaborated closely with frontend teams to ensure smooth data flow, usability, and performance of user-facing features.
+________________________________________Samsung R&D Institute Indonesia – Software Engineer (Cloud Infrastructure)
+Aug 2023 – Feb 2025 | Jakarta, Indonesia
+•	Owned end-to-end development of cloud-based applications, contributing across backend services, data pipelines, and integration layers for real-time, high-throughput systems. 
+•	Designed and built scalable backend services using C#, Java, gRPC, Proto.Actor, Redis, and FoundationDB, supporting low-latency distributed communication at scale. 
+•	Engineered a high-performance streaming platform capable of processing ~1 million events per second across multiple channels, improving data throughput by 2× and enabling near real-time analytics. 
+•	Developed event-driven and workflow orchestration systems using Kafka and Temporal, achieving high reliability (>99.9% success rate) for critical background processes. 
+•	Built and maintained production-grade CI/CD pipelines and containerized deployments using Docker, Kubernetes, and Helm, reducing deployment time by ~70% and enabling zero-downtime releases. 
+•	Implemented monitoring and observability using LGTM (Loki, Grafana, Tempo, Mimir) stack. 
+•	Optimized system performance and significant cost efficiency improvements in cloud infrastructure. 
+•	Achieved Samsung Advanced-Level Software Certification in algorithms & data structures, demonstrating strong problem-solving and system design capabilities.
+________________________________________
+Pasifik Satelit Nusantara – Backend Developer
+Mar 2022 – Aug 2023 | Cikarang, Indonesia
+•	Delivered end-to-end features for internal and customer-facing systems, contributing across backend services, API design, and integration layers for telecommunication and satellite service operations. 
+•	Designed and maintained high-performance backend services handling 10,000+ concurrent API users, ensuring reliable service delivery and low-latency responses. 
+•	Developed and scaled ERP modules used by 500+ internal users, streamlining operational workflows and consistently delivering features on schedule. 
+•	Designed and implemented RESTful APIs  for billing and service management using Django, Flask, and FastAPI, enabling seamless integration with frontend and third-party systems. 
+•	Designed and implemented centralized logging and monitoring pipelines using Kafka, Elasticsearch, and Kibana, reducing incident investigation time by ~50% and improving system observability. 
+•	Deployed and managed cloud-based applications on AWS Elastic Beanstalk with Docker, improving system availability to >99.9% and enhancing deployment consistency. 
+•	Collaborated with cross-functional teams (frontend, QA, and operations) to deliver production-ready features, ensuring alignment between backend systems and user-facing applications.
+________________________________________
+KJPP Rengganis, Hamid & Rekan – Data Scientist | Aug 2021 – Feb 2022 | Jakarta, Indonesia
+•	Built an Automated Valuation Model (AVM) using Random Forest, reducing error rate to <13%.
+•	Developed a full-stack AVM app with Django + Vue.js, managing 6M+ data rows.
+•	Enhanced property valuation accuracy for PT PLN (Indonesia’s State Electricity Company).
+________________________________________
+Education | B.Sc. Mathematics – Bandung Institute of Technology (ITB), Jul 2021 | GPA 3.38
+Published research on fluid dynamics in Elsevier Results in Engineering.
+https://authors.elsevier.com/sd/article/S259003742100039X 
+Projects & Others
+AquaSphere - Fishery Management System (Python, Django, MySQL, Docker, Tailwind CSS, Chart.js, Gunicorn, WhiteNoise) – 2026 Ongoing Project
+•	Architected a Dockerized, full-stack aquaculture management platform using Django, MySQL, and Tailwind CSS to digitize end-to-end fish farming workflows, featuring a comprehensive multi-module domain model, custom role-aware authentication, and robust unit testing within a server-rendered architecture.
+Project Management Application (Jira-like) – React, TypeScript - 2025
+•	Built a highly responsive full-stack project management application using React and TypeScript, leveraging scalable component architecture, the Context API, and RESTful APIs to deliver optimized drag-and-drop task boards and real-time workflow synchronization.
+Dental Application – Ceres Dental with Optimized SEO (Laravel, PHP, Tailwind CSS) - 2025
+•	Developed a responsive, full-stack web application within a custom CMS, leveraging Tailwind CSS to build reusable, accessible UI components that streamline dynamic content management workflows and improve overall SEO performance through optimized layouts and metadata. More details https://ceresdental.com.au/ 
+Distributed Chat Application (gRPC, Proto Actor, .NET) - 2024
+•	Built a scalable messaging backend using actor-based architecture and gRPC for internal communication that supports 1 million messages / second / channel.
+Fintech Payment & Ledger Service (.NET) - 2024
+•	A Dockerized, high-throughput .NET 9 payment processing API designed to simulate real-world fintech constraints by leveraging Redis and MySQL to ensure idempotent handling, prevent double-spending, and maintain data integrity during concurrent balance updates. More details https://github.com/afifhrz/high-throughput-order-system-dotnet .
+Blue Mountain Observatory Telescope Automation (Python, Django, Alpine.js) - 2024
+•	Developed a full-stack telescope automation web application leveraging Alpine.js for lightweight state management and responsive live image rendering, seamlessly integrating backend APIs to streamline observatory workflows and eliminate the need for two on-site operators. More details https://bluemountainsobservatory.com.au and https://bluemoutainsobservatory.com 
+Household Management System | Personal Full-Stack Web Application (Django, Python, MariaDB) - 2022
+•	Built a comprehensive personal management web application featuring a unified dashboard that centralizes household finances, tracks multi-asset investments using live API integrations, and streamlines everyday tasks like debt tracking, savings goals, vehicle maintenance, and automated invoicing for a side business. More details https://household.harizcorp.biz.id/
+________________________________________
+Additional
+•	Strong experience working in distributed and remote teams 
+•	Experienced in Agile environments and cross-functional collaboration 
+•	Regularly leverage AI tools to improve development productivity and debugging 
+
