@@ -16,14 +16,14 @@
     "archived_at": null,
     "created_at": "2026-05-25T09:46:00.664053+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-05T05:01:36.753298+00:00",
-    "last_used_at": "2026-06-05T06:03:06.359761+00:00",
-    "last_viewed_at": "2026-06-05T06:01:54.854244+00:00",
-    "patch_count": 9,
+    "last_patched_at": "2026-06-05T06:51:32.219635+00:00",
+    "last_used_at": "2026-06-05T06:52:14.213398+00:00",
+    "last_viewed_at": "2026-06-05T06:52:14.196073+00:00",
+    "patch_count": 17,
     "pinned": false,
     "state": "active",
-    "use_count": 19,
-    "view_count": 10
+    "use_count": 22,
+    "view_count": 13
   },
   "indonesian-news-scraping": {
     "archived_at": null,

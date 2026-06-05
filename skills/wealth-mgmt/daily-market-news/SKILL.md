@@ -30,7 +30,6 @@ Scheduled daily at 07:00 WIB.
     - Yahoo Finance, Reuters, CNBC, Bloomberg, FXStreet, Kitco. **PRIMARY METHOD: Use Google search with site: operator (e.g., `site:yahoo.com [query]`)** to avoid bot detection.
 
     **Scraping Notes for Indonesian Portals:**
-    - **CRITICAL PITFALL: Direct site navigation often triggers bot detection (CAPTCHAs, access blocks) and can lead to wrong URL extraction. ALWAYS try Google search with site: operator FIRST.**
     - These sites may use JavaScript rendering — use `browser_navigate` + `browser_console` with JS extraction for article content when necessary.
     - If a direct article URL 404s, fall back to the search result snippet and mark URL as `NOT_FOUND`.
     - Do NOT fabricate URLs — if no verifiable article URL can be found, omit the news item.
@@ -39,6 +38,8 @@ Scheduled daily at 07:00 WIB.
     - For bloombergtechnoz.com, article URLs typically follow `/news/[category]/[slug]`.
     - For bisnis.com (market & ekonomi), article URLs typically follow `/read/[YYYY]/[MM]/[DD]/[slug]`.
     - For investor.id, article URLs typically follow `/[category]/[slug]`.
+    - **CRITICAL PITFALL: Direct site navigation often triggers bot detection (CAPTCHAs, access blocks) and can lead to wrong URL extraction. ALWAYS try Google search with site: operator FIRST.**
+    - If Google search with site: operator returns results predominantly older than 90 days, refine your search with date restrictions (e.g., add `after:2026-03-01` for Q2 2026 news) or consider alternative sources for that query.
 2. **Persistence (Archive Mode)**: 
     - Instead of overwriting, **APPEND** today's curated news to `weekly_news_archive.json`.
     - If it is Monday, start a fresh archive for the new week.
@@ -49,12 +50,17 @@ Scheduled daily at 07:00 WIB.
     - URLs must point to the **specific article**, not a homepage or category page.
     - Send via `send_message` to the Telegram home channel.
 
-## Verification
+    ## Verification
 - Check if `weekly_news_archive.json` contains an increasing list of news items throughout the week.
 - Verify Telegram message contains today's material items with clickable links.
 - Verify archive starts fresh each Monday.
 - **Verify all URLs are direct article links** — reject any URL that is just a domain root or category page (e.g., `finance.yahoo.com` without a `/news/...` path, or `cnbcindonesia.com/market` without a specific article slug).
 - **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs obtained via Google search with site: operator over direct site navigation to avoid bot detection issues.
+- **URL Freshness Check:** Spot-check that URLs in today's news section are from the last 1-3 days for daily briefs.
+- **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs obtained via Google search with site: operator over direct site navigation to avoid bot detection issues.
 
 ## Related Skills
 - For ad-hoc deep research on specific assets (e.g., "give me evidence for SIDO"), use the `asset-research` skill.
+
+## Supporting Documentation
+- See `references/url_validation_best_practices.md` for URL validation guidelines
