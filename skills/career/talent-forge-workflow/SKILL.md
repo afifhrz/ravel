@@ -19,8 +19,9 @@ This skill defines the procedure for identifying global remote opportunities and
 
 2. **Multi-Portal Search**
    - **WeWorkRemotely**: Search for "Remote" categories.
-   - **LinkedIn**: Use search queries like `"[Role] remote worldwide"` or `"[Role] remote any location"`.
+   - **LinkedIn**: Use search queries like "[Role] remote worldwide" or "[Role] remote any location".
    - **Arc.dev**: Filter for "Remote" and "Global".
+   - **Greenhouse.io**: Search for remote positions using keyword filters and location filters set to "Remote" or "Anywhere".
    - **Upwork**: Filter for "Fixed-price" or "Hourly" remote contracts.
    - **Arbeitnow**: Filter for "Remote" and check for "No visa required".
 

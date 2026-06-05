@@ -17,21 +17,23 @@ Scheduled daily at 07:00 WIB.
 
     ### News Sources (Priority Order)
     **Indonesian Portals (scrape first for IDX/local context):**
-    - **kontan.co.id** — Market & business news. Use Google search `site:kontan.co.id [ticker/topic]` or navigate to `https://www.kontan.co.id/search/?q=[query]`. Extract article URLs from search results.
-    - **bloombergtechnoz.com** — Bloomberg Indonesia tech & market coverage. Navigate to `https://www.bloombergtechnoz.com/` and scrape latest headlines. Use search: `https://www.bloombergtechnoz.com/search?q=[query]`.
-    - **katadata.co.id** — Data-driven economic & business journalism. Navigate to `https://katadata.co.id/` or use `https://katadata.co.id/search?q=[query]`. Good for macro/sector analysis.
-    - **bisnis.com** — Bisnis Indonesia group, covers both `market.bisnis.com` (IDX market news) and `ekonomi.bisnis.com` (broader economy). Scrape both subdomains for comprehensive coverage. Use `https://market.bisnis.com/` for ticker-specific news and `https://ekonomi.bisnis.com/` for macro/economic context. Search: `https://www.bisnis.com/search?k=[query]`. Article URLs typically follow `/read/[YYYY]/[MM]/[DD]/[slug]` on both subdomains.
-    - **emitennews.com** — Dedicated IDX stock news portal with per-ticker news feeds. Navigate to `https://emitennews.com/` for latest headlines, or use `https://emitennews.com/saham/[TICKER_CODE]` (e.g., `https://emitennews.com/saham/ADRO`) for ticker-specific news. Article URLs typically follow `/news/[slug]` or `/read/[slug]`.
-    - **stockwatch.id** — IDX stock market data & news. Navigate to `https://stockwatch.id/` for market news and analysis. Use `https://stockwatch.id/emiten/[TICKER_CODE]` (e.g., `https://stockwatch.id/emiten/ADRO`) for ticker-specific news and financial data. Article URLs typically follow `/news/[slug]` or `/berita/[slug]`.
-    - **investor.id** — Investment-focused news & analysis portal. Navigate to `https://investor.id/` for latest market headlines. Use `https://investor.id/search/[query]` for specific tickers/topics. Good for retail investor sentiment and stock picks. Article URLs typically follow `/[category]/[slug]`.
-    - **cnbcindonesia.com** — CNBC Indonesia market & business news. Navigate to `https://www.cnbcindonesia.com/market` for latest headlines. Use `https://www.cnbcindonesia.com/search?query=[query]` for specific tickers/topics. **WARNING: Direct article URLs frequently 404** — prefer scraping from the market page or search results, and always verify the URL before including it. Article URLs typically follow `/market/[YYYY]/[MM]/[DD]/[slug]`.
+    - **kontan.co.id** — Market & business news. **PRIMARY METHOD: Use Google search `site:kontan.co.id [ticker/topic]`** to avoid bot detection and ensure correct article URLs. If Google search fails, navigate to `https://www.kontan.co.id/search/?q=[query]` and extract article URLs from search results.
+    - **bloombergtechnoz.com** — Bloomberg Indonesia tech & market coverage. **PRIMARY METHOD: Use Google search `site:bloombergtechnoz.com [query]`**. If Google search fails, navigate to `https://www.bloombergtechnoz.com/` and scrape latest headlines. Use search: `https://www.bloombergtechnoz.com/search?q=[query]`.
+    - **katadata.co.id** — Data-driven economic & business journalism. **PRIMARY METHOD: Use Google search `site:katadata.co.id [query]`**. If Google search fails, navigate to `https://katadata.co.id/` or use `https://katadata.co.id/search?q=[query]`. Good for macro/sector analysis.
+    - **bisnis.com** — Bisnis Indonesia group, covers both `market.bisnis.com` (IDX market news) and `ekonomi.bisnis.com` (broader economy). **PRIMARY METHOD: Use Google search `site:bisnis.com [query]`**. If Google search fails, scrape both subdomains for comprehensive coverage. Use `https://market.bisnis.com/` for ticker-specific news and `https://ekonomi.bisnis.com/` for macro/economic context. Search: `https://www.bisnis.com/search?k=[query]`. Article URLs typically follow `/read/[YYYY]/[MM]/[DD]/[slug]` on both subdomains.
+    - **emitennews.com** — Dedicated IDX stock news portal with per-ticker news feeds. **PRIMARY METHOD: Use Google search `site:emitennews.com [TICKER_CODE]`** (e.g., `site:emitennews.com ADRO`). If Google search fails, navigate to `https://emitennews.com/` for latest headlines, or use `https://emitennews.com/saham/[TICKER_CODE]` (e.g., `https://emitennews.com/saham/ADRO`) for ticker-specific news. Article URLs typically follow `/news/[slug]` or `/read/[slug]`.
+    - **stockwatch.id** — IDX stock market data & news. **PRIMARY METHOD: Use Google search `site:stockwatch.id [query]`**. If Google search fails, navigate to `https://stockwatch.id/` for market news and analysis. Use `https://stockwatch.id/emiten/[TICKER_CODE]` (e.g., `https://stockwatch.id/emiten/ADRO`) for ticker-specific news and financial data. Article URLs typically follow `/news/[slug]` or `/berita/[slug]`.
+    - **investor.id** — Investment-focused news & analysis portal. **PRIMARY METHOD: Use Google search `site:investor.id [query]`**. If Google search fails, navigate to `https://investor.id/` for latest market headlines. Use `https://investor.id/search/[query]` for specific tickers/topics. Good for retail investor sentiment and stock picks. Article URLs typically follow `/[category]/[slug]`.
+    - **cnbcindonesia.com** — CNBC Indonesia market & business news. **PRIMARY METHOD: Use Google search `site:cnbcindonesia.com [query]`**. **WARNING: Direct article URLs frequently 404** — if Google search fails, prefer scraping from the market page or search results, and always verify the URL before including it. Article URLs typically follow `/market/[YYYY]/[MM]/[DD]/[slug]`.
 
     **International Sources (for global macro/gold/currency):**
-    - Yahoo Finance, Reuters, CNBC, Bloomberg, FXStreet, Kitco.
+    - Yahoo Finance, Reuters, CNBC, Bloomberg, FXStreet, Kitco. **PRIMARY METHOD: Use Google search with site: operator (e.g., `site:yahoo.com [query]`)** to avoid bot detection.
 
     **Scraping Notes for Indonesian Portals:**
-    - These sites may use JavaScript rendering — use `browser_navigate` + `browser_console` with JS extraction for article content.
+    - **CRITICAL PITFALL: Direct site navigation often triggers bot detection (CAPTCHAs, access blocks) and can lead to wrong URL extraction. ALWAYS try Google search with site: operator FIRST.**
+    - These sites may use JavaScript rendering — use `browser_navigate` + `browser_console` with JS extraction for article content when necessary.
     - If a direct article URL 404s, fall back to the search result snippet and mark URL as `NOT_FOUND`.
+    - Do NOT fabricate URLs — if no verifiable article URL can be found, omit the news item.
     - For kontan.co.id, prefer the `/read/` or `/news/` path patterns for article links.
     - For katadata.co.id, article URLs typically follow `/news/read/[slug]` or `/analisis/read/[slug]`.
     - For bloombergtechnoz.com, article URLs typically follow `/news/[category]/[slug]`.
@@ -52,6 +54,7 @@ Scheduled daily at 07:00 WIB.
 - Verify Telegram message contains today's material items with clickable links.
 - Verify archive starts fresh each Monday.
 - **Verify all URLs are direct article links** — reject any URL that is just a domain root or category page (e.g., `finance.yahoo.com` without a `/news/...` path, or `cnbcindonesia.com/market` without a specific article slug).
+- **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs obtained via Google search with site: operator over direct site navigation to avoid bot detection issues.
 
 ## Related Skills
 - For ad-hoc deep research on specific assets (e.g., "give me evidence for SIDO"), use the `asset-research` skill.
