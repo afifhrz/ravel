@@ -278,7 +278,7 @@ display:
     first_lines: 2
     last_lines: 2
 fallback_providers:
-  - model: openrouter/owl-alpha
+  - model: nvidia/nemotron-3-super-120b-a12b:free
     provider: openrouter
   - model: google/gemma-4-31b-it:free
     provider: openrouter
@@ -351,7 +351,7 @@ memory:
   user_profile_enabled: true
 model:
   base_url: https://openrouter.ai/api/v1
-  default: nvidia/nemotron-3-super-120b-a12b:free
+  default: openrouter/owl-alpha
   provider: openrouter
 model_catalog:
   enabled: true
@@ -500,7 +500,7 @@ terminal:
   container_disk: 51200
   container_memory: 5120
   container_persistent: true
-  cwd: ./household
+  cwd: household
   daytona_image: nikolaik/python-nodejs:python3.11-nodejs20
   docker_env: {}
   docker_extra_args: []
