@@ -17,13 +17,18 @@ This skill defines the procedure for identifying global remote opportunities and
    - **FALLBACK**: If `cv_text.txt` is missing or empty, load the main CV PDF from `G:\My Drive\Dokumen Persyaratan Umum\CV\Ahmad_Afif_Aulia_Hariz_CV_Main.pdf` and extract text using the `ocr-and-documents` skill. Also save the extracted text back to `cv_text.txt` for future runs.
    - The CV contains: Profile summary, Key Skills (C#, Python, Java, Go, PHP, JavaScript, React, TypeScript, .NET, Spring Boot, Django, FastAPI, Kafka, Temporal, Redis, AWS, Kubernetes, Docker, etc.), and Professional Experience at The Software Practice (Singapore), Samsung R&D Indonesia, PSN, etc.
 
-2. **Multi-Portal Search**
-   - **WeWorkRemotely**: Search for "Remote" categories.
-   - **LinkedIn**: Use search queries like "[Role] remote worldwide" or "[Role] remote any location".
+2. **Multi-Portal Search (ALL of the following are MANDATORY — do not skip any)**
+   - **Greenhouse.io**: Use browser to visit `https://boards.greenhouse.io/boards/embedded_job_board?for=` or search via `https://job-boards.greenhouse.io/` — many companies use Greenhouse as their ATS. Search for "remote" roles and filter for global/anywhere positions. **This is a critical source — do not skip.**
    - **Arc.dev**: Filter for "Remote" and "Global".
-   - **Greenhouse.io**: Search for remote positions using keyword filters and location filters set to "Remote" or "Anywhere".
    - **Upwork**: Filter for "Fixed-price" or "Hourly" remote contracts.
    - **Arbeitnow**: Filter for "Remote" and check for "No visa required".
+   - **RemoteOK**: Search for global remote software engineering roles.
+   - **WorkingNomads**: Search for remote tech jobs.
+   - **Lever.co (Lever ATS)**: Many tech companies use Lever as their ATS. Search via `https://jobs.lever.co/` with "remote" keyword. Same approach as Greenhouse — company career pages often embed Lever boards.
+   - **Workable**: Search `https://apply.workable.com/` for remote roles — another widely-used ATS.
+   - **Remotive**: Visit `https://remotive.com/` — curated remote jobs, strong for tech roles.
+   - **JustRemote**: Visit `https://justremote.co/` — aggregates global remote positions.
+   - **Himalayas**: Visit `https://himalayas.app/` — remote job board with visa/salary transparency.
 
 3. **Filtering & Validation**
    - Scan the "Requirements" or "Location" section for keywords: *Visa, Work Permit, Residency, "Must be located in", "Authorized to work in"*.

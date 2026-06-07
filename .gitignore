@@ -50,3 +50,10 @@ gateway.lock
 skills/.curator_backups/*
 skills/.archive/*
 plugins/hermes-achievements/*
+cron/jobs.json
+skills/.usage.json
+channel_directory.json
+household/market_data/live_data.json
+household/market_data/quarterly_financials.json
+household/market_data/weekly_news_archive.json
+household/market_data/strategic_analysis_v2.md

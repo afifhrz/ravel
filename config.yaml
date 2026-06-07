@@ -500,7 +500,7 @@ terminal:
   container_disk: 51200
   container_memory: 5120
   container_persistent: true
-  cwd: household
+  cwd: "C:/Users/afifs/AppData/Local/hermes/profiles/ravel/household"
   daytona_image: nikolaik/python-nodejs:python3.11-nodejs20
   docker_env: {}
   docker_extra_args: []
