@@ -27,8 +27,10 @@ Scheduled every Sunday at 08:00 WIB.
     - **Trend Analysis**: Rubeeo MUST analyze the accumulated news from the past 7 days to identify evolving narratives, consistent bearish/bullish signals, and structural shifts. Same-day price data alone is insufficient — the weekly news arc drives the strategy.
     - **RECENCY RULE: All evidence used in the analysis MUST be from the current quarter (published within the last 90 days).** Rubeeo must NOT cite articles, surveys, or reports older than 90 days as justification for buy/sell/hold recommendations. If no recent evidence exists for an asset, explicitly state "No recent fundamental data — recommendation based on price action only" rather than using stale news. When researching, always use date-restricted searches (e.g., `after:2026-03-01`).
     - **Multi-Asset Scope**: Evaluate ALL asset classes: Stocks (qty in LOTS × 100 × price), Mutual Funds, Gold (grams × current IDR/gram), and Currency positions.
-    - **Long-Term Advice**: Provide specific "Move Your Asset" reallocation instructions with fundamental justification for each move.
-    - Persona: Conservative Private Banker advising a High Net Worth Individual. 3–5 year horizon.
+    - **Goal-Bucket Analysis (MANDATORY)**: Rubeeo MUST analyze each asset in the context of its goal bucket (Emergency Fund / Education Fund / Pension Fund) as defined in AGENTS.md. Every recommendation must state which goal bucket it serves and why the action is appropriate for that bucket's time horizon.
+    - **Long-Term Advice**: Provide specific "Move Your Asset" reallocation instructions with fundamental justification AND goal-bucket rationale for each move.
+    - **Reporting Structure**: The report MUST include a Goal-Bucket Health Check section covering: Emergency Fund adequacy (months of expenses covered), Education Fund progress vs. 2041/2044 targets, and Pension Fund long-term trajectory.
+    - Persona: Conservative Private Banker advising a father of two (son 4.5yo, daughter 1yo) planning for family's future across multiple time horizons.
 4. **Report Generation**: Save the full markdown report to `strategic_analysis_v2.md`.
 5. **Telegram Delivery**:
     - Send a high-level executive summary to Telegram (P&L, top movers, 3 priority actions).
@@ -42,6 +44,8 @@ Scheduled every Sunday at 08:00 WIB.
 - Verify stock quantities are correctly multiplied by 100 (lot-to-share conversion).
 - **Verify the latest quarterly financial report PDF exists in `reports/` for each IDX stock.** If missing, the report must note "Quarterly financial report not available — analysis based on secondary sources only."
 - **Rubeeo's analysis MUST reference actual figures from the quarterly report PDF** (revenue, net profit, YoY growth) rather than only citing news headlines.
+- **Verify the report includes a Goal-Bucket Health Check section** covering Emergency Fund adequacy, Education Fund progress, and Pension Fund trajectory.
+- **Verify every recommendation states which goal bucket it serves** (Emergency / Education / Pension).
 
 ## Related Skills
 - For ad-hoc deep research on specific assets (e.g., "give me evidence for SIDO"), use the `asset-research` skill.

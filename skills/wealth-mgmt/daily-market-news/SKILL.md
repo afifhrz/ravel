@@ -7,29 +7,52 @@ description: Daily scrape of material market news and delivery to Telegram.
 
 ## Trigger
 Scheduled daily at 07:00 WIB.
+**MANUAL TRIGGER AVAILABLE:** Use `cronjob(action='run', job_id='<job_id>')` to execute immediately for testing or urgent updates.
 
 ## Steps
 1. **Data Acquisition**: Delegate to Empulso to scrape material news for:
-    - IDX Tickers (ADRO, PTBA, AADI, IKBI, RIGS, ASII, UNTR, MYOH, KMDS, SIDO).
+    - IDX Tickers from `master_assets.json` (stocks in LOTS). Load the ticker list dynamically — do NOT hardcode tickers.
     - Global Macro trends affecting Gold and Currencies (GBP, CNY, SGD).
     - **CRITICAL: Every news item must include the DIRECT ARTICLE URL** — the full link to the specific news page (e.g., `https://finance.yahoo.com/news/adro-stock-rises-today-1234567890.html`), NOT a generic domain (`https://finance.yahoo.com`), NOT a quote page (`https://finance.yahoo.com/quote/ADRO.JK/`), and NOT a category page (`https://www.cnbcindonesia.com/market`). If no article URL can be found, mark the source as `"url": "NOT_FOUND"` and do NOT fabricate a URL.
     - **RECENCY RULE: Only include news published within the current quarter (last 90 days).** Anything older is stale and must be discarded. For daily news, prefer items from the last 1-3 days. For weekly analysis, the entire weekly archive should only contain items from the current week. If a search result points to an article older than 90 days, skip it and search again with a date filter.
 
-    ### News Sources (Priority Order)
-    **Indonesian Portals (scrape first for IDX/local context):**
-    - **kontan.co.id** — Market & business news. **PRIMARY METHOD: Use Google search `site:kontan.co.id [ticker/topic]`** to avoid bot detection and ensure correct article URLs. If Google search fails, navigate to `https://www.kontan.co.id/search/?q=[query]` and extract article URLs from search results.
-    - **bloombergtechnoz.com** — Bloomberg Indonesia tech & market coverage. **PRIMARY METHOD: Use Google search `site:bloombergtechnoz.com [query]`**. If Google search fails, navigate to `https://www.bloombergtechnoz.com/` and scrape latest headlines. Use search: `https://www.bloombergtechnoz.com/search?q=[query]`.
-    - **katadata.co.id** — Data-driven economic & business journalism. **PRIMARY METHOD: Use Google search `site:katadata.co.id [query]`**. If Google search fails, navigate to `https://katadata.co.id/` or use `https://katadata.co.id/search?q=[query]`. Good for macro/sector analysis.
-    - **bisnis.com** — Bisnis Indonesia group, covers both `market.bisnis.com` (IDX market news) and `ekonomi.bisnis.com` (broader economy). **PRIMARY METHOD: Use Google search `site:bisnis.com [query]`**. If Google search fails, scrape both subdomains for comprehensive coverage. Use `https://market.bisnis.com/` for ticker-specific news and `https://ekonomi.bisnis.com/` for macro/economic context. Search: `https://www.bisnis.com/search?k=[query]`. Article URLs typically follow `/read/[YYYY]/[MM]/[DD]/[slug]` on both subdomains.
-    - **emitennews.com** — Dedicated IDX stock news portal with per-ticker news feeds. **PRIMARY METHOD: Use Google search `site:emitennews.com [TICKER_CODE]`** (e.g., `site:emitennews.com ADRO`). If Google search fails, navigate to `https://emitennews.com/` for latest headlines, or use `https://emitennews.com/saham/[TICKER_CODE]` (e.g., `https://emitennews.com/saham/ADRO`) for ticker-specific news. Article URLs typically follow `/news/[slug]` or `/read/[slug]`.
-    - **stockwatch.id** — IDX stock market data & news. **PRIMARY METHOD: Use Google search `site:stockwatch.id [query]`**. If Google search fails, navigate to `https://stockwatch.id/` for market news and analysis. Use `https://stockwatch.id/emiten/[TICKER_CODE]` (e.g., `https://stockwatch.id/emiten/ADRO`) for ticker-specific news and financial data. Article URLs typically follow `/news/[slug]` or `/berita/[slug]`.
-    - **investor.id** — Investment-focused news & analysis portal. **PRIMARY METHOD: Use Google search `site:investor.id [query]`**. If Google search fails, navigate to `https://investor.id/` for latest market headlines. Use `https://investor.id/search/[query]` for specific tickers/topics. Good for retail investor sentiment and stock picks. Article URLs typically follow `/[category]/[slug]`.
-    - **cnbcindonesia.com** — CNBC Indonesia market & business news. **PRIMARY METHOD: Use Google search `site:cnbcindonesia.com [query]`**. **WARNING: Direct article URLs frequently 404** — if Google search fails, prefer scraping from the market page or search results, and always verify the URL before including it. Article URLs typically follow `/market/[YYYY]/[MM]/[DD]/[slug]`.
+    ### Google Search Strategy (Two-Phase Approach)
+
+    **Do NOT query per-ticker per-site.** Instead, use a broad search per site, then intersect results with the ticker list.
+
+    **Phase 1 — Broad Google Search per Portal:**
+    For each Indonesian portal, run ONE broad Google search (no ticker code):
+    ```
+    indonesia market news today site:xxx.com
+    ```
+    Example queries:
+    - `indonesia market news today site:kontan.co.id`
+    - `indonesia market news today site:bloombergtechnoz.com`
+    - `indonesia market news today site:katadata.co.id`
+    - `indonesia market news today site:bisnis.com`
+    - `indonesia market news today site:emitennews.com`
+    - `indonesia market news today site:stockwatch.id`
+    - `indonesia market news today site:investor.id`
+    - `indonesia market news today site:cnbcindonesia.com`
+
+    **Phase 2 — Ticker Intersection:**
+    From the Google search results, extract all article URLs and headlines. Then check which of our tickers appear in each result's title/snippet/URL:
+    - **Ticker list**: ADRO, PTBA, AADI, IKBI, RIGS, ASII, UNTR, MYOH, KMDS, SIDO
+    - Also match company name variants (e.g., "Alamtri" for ADRO, "Bukit Asam" for PTBA, "Astra" for ASII, "United Tractors" for UNTR, "Telkom" for TLKM, "Sido Muncul" for SIDO)
+    - Only keep articles where at least one ticker/company name intersects
+    - Discard articles that don't mention any of our tickers
+
+    **For macro/sector news** (not ticker-specific but affects portfolio):
+    - Keep articles about: IHSG, rupiah/USD, Bank Indonesia policy, Danantara, commodity export rules, coal/nickel prices, EV policy, interest rates
+    - These don't need a ticker match — include if materially relevant
 
     **International Sources (for global macro/gold/currency):**
-    - Yahoo Finance, Reuters, CNBC, Bloomberg, FXStreet, Kitco. **PRIMARY METHOD: Use Google search with site: operator (e.g., `site:yahoo.com [query]`)** to avoid bot detection.
+    - `gold price today site:kitco.com` or `gold price today site:reuters.com`
+    - `oil price today site:reuters.com` or `brent crude today site:bloomberg.com`
+    - `rupiah exchange rate today site:reuters.com` or `USD IDR today site:cnbc.com`
+    - `GBP USD today site:fxstreet.com` or `CNY USD today site:fxstreet.com`
 
-    **Scraping Notes for Indonesian Portals:**
+    **Scraping Notes:**
     - These sites may use JavaScript rendering — use `browser_navigate` + `browser_console` with JS extraction for article content when necessary.
     - If a direct article URL 404s, fall back to the search result snippet and mark URL as `NOT_FOUND`.
     - Do NOT fabricate URLs — if no verifiable article URL can be found, omit the news item.
@@ -38,8 +61,9 @@ Scheduled daily at 07:00 WIB.
     - For bloombergtechnoz.com, article URLs typically follow `/news/[category]/[slug]`.
     - For bisnis.com (market & ekonomi), article URLs typically follow `/read/[YYYY]/[MM]/[DD]/[slug]`.
     - For investor.id, article URLs typically follow `/[category]/[slug]`.
-    - **CRITICAL PITFALL: Direct site navigation often triggers bot detection (CAPTCHAs, access blocks) and can lead to wrong URL extraction. ALWAYS try Google search with site: operator FIRST.**
-    - If Google search with site: operator returns results predominantly older than 90 days, refine your search with date restrictions (e.g., add `after:2026-03-01` for Q2 2026 news) or consider alternative sources for that query.
+    - For cnbcindonesia.com, article URLs typically follow `/market/[YYYY]/[MM]/[DD]/[slug]`. **WARNING: Direct article URLs frequently 404** — always verify before including.
+    - **CRITICAL PITFALL: Direct site navigation often triggers bot detection (CAPTCHAs, access blocks). ALWAYS use Google search first, never navigate directly to news sites.**
+    - If Google search returns results predominantly older than 90 days, refine with date restrictions (e.g., add `after:2026-03-01` for Q2 2026) or skip that source.
 2. **Persistence (Archive Mode)**: 
     - Instead of overwriting, **APPEND** today's curated news to `weekly_news_archive.json`.
     - If it is Monday, start a fresh archive for the new week.
@@ -55,9 +79,9 @@ Scheduled daily at 07:00 WIB.
 - Verify Telegram message contains today's material items with clickable links.
 - Verify archive starts fresh each Monday.
 - **Verify all URLs are direct article links** — reject any URL that is just a domain root or category page (e.g., `finance.yahoo.com` without a `/news/...` path, or `cnbcindonesia.com/market` without a specific article slug).
-- **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs obtained via Google search with site: operator over direct site navigation to avoid bot detection issues.
+- **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs from broad Google search `indonesia market news today site:xxx.com` with ticker intersection, never from direct site navigation.
 - **URL Freshness Check:** Spot-check that URLs in today's news section are from the last 1-3 days for daily briefs.
-- **CRITICAL: Validate that URLs were obtained through reliable methods** — prefer URLs obtained via Google search with site: operator over direct site navigation to avoid bot detection issues.
+- **Source Diversity Check:** Verify the brief draws from multiple portals (not just cnbcindonesia). If only one source produced results, note this in the brief.
 
 ## Related Skills
 - For ad-hoc deep research on specific assets (e.g., "give me evidence for SIDO"), use the `asset-research` skill.

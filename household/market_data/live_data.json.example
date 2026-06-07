@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-06-07T08:00:00+07:00",
+  "scrape_date": "2026-06-07",
+  "IDX": {
+    "ADRO": 2240,
+    "PTBA": 2590,
+    "AADI": 7575,
+    "IKBI": 488,
+    "RIGS": 650,
+    "ASII": 4570,
+    "UNTR": 21250,
+    "MYOH": 1035,
+    "KMDS": 530,
+    "SIDO": 364
+  },
+  "forex": {
+    "USD_IDR": 18015,
+    "GBP_IDR": 24032.32,
+    "CNY_IDR": 2662.60,
+    "SGD_IDR": 13973.53
+  },
+  "commodities": {
+    "GOLD_USD": 4365.30,
+    "BRENT_CRUDE": 93.09
+  },
+  "indices": {
+    "IHSG": 5594.77,
+    "SP500": 7383.74
+  }
+}
