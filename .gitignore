@@ -57,3 +57,8 @@ household/market_data/live_data.json
 household/market_data/quarterly_financials.json
 household/market_data/weekly_news_archive.json
 household/market_data/strategic_analysis_v2.md
+home/.local/bin/*
+household/market_data/curated_news.json
+household/market_data/email_mime.txt
+household/market_data/email_template.txt
+household/market_data/strategic_analysis_v2.txt
