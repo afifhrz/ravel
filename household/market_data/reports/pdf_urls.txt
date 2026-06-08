@@ -1,0 +1,16 @@
+Quarterly Financial Report PDF URLs
+Generated: 2026-06-07
+
+SIDO Q1 2026: https://investor.sidomuncul.co.id/misc/fr/2026/Q1-2026.pdf
+ASII Q1 2026: https://r2.astra.co.id/financial-reports/Astra%20Account%20March%202026.pdf
+ADRO Q1 2026: https://www.alamtri.com/files/news/berkas_eng/2361/FS%20Alamtri%20Resources%20Indonesia%2031%20March%202026.pdf
+PTBA Q1 2026: https://www.ptba.co.id/api/storage/1777524786999-0560268c-b3d4-4994-b8f2-f9b62d1e1e7b.pdf
+AADI Q1 2026: https://adaroindonesia.com/app/webroot/upload/files/Kinerja_perusahaan/FS%20Adaro%20Andalan%20Indonesia%20-%2031%20March%202026.pdf
+UNTR Q1 2026: https://www.unitedtractors.com/wp-content/uploads/2026/04/Investor-Bulletin-1Q-2026-Final.pdf
+MYOH Q3 2025: https://samindoresources.com/res/fiona/drive/uploads/3.%20FS%20Samindo%20Resources%20Tbk%20Q3-2025.pdf (Note: Q3 2025 is latest available, no Q1 2026 found)
+RIGS Q1 2026: http://rigtenders.co.id/wp-content/uploads/2026/04/Report-Konsol-RTI-Mar-2026-Final.pdf
+KMDS Q1 2026: https://www.kmds.co.id/images/slider/news/IPO/Lap%20Keu%20KMDS%20mar%202026.pdf
+IKBI: NOT_FOUND (company website down, IDX blocked by Cloudflare)
+
+Note: PDFs could not be downloaded and saved to reports/ directory due to browser limitations.
+Analysis will rely on secondary sources (news archive) for financial figures.
