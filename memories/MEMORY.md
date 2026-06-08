@@ -10,16 +10,18 @@ Asset Master File: C:\Users\afifs\market_data\master_assets.json
 §
 Wealth Management System Path: C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\market_data. This contains master_assets.json, AGENTS.md, and the portfolio pipeline files.
 §
-Delivery Preferences: 
-1. Strategic Analysis must be sent as a file attachment (MEDIA:path) to Telegram.
-2. Curated News must include clickable URLs for every item.
+Delivery: Email via Himalaya preferred. Telegram MEDIA unreliable for file attachments.
+News must include clickable URLs for every item.
 §
 TalentForge CV: pre-extracted text at C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\talent_forge\cv_text.txt. Primary source for subagent — faster than PDF extraction. Fallback to GDrive PDF if missing.
 §
 D: drive MSYS path is /d/ not D:/. Use /d/ prefix for all D: drive access. Terminal with bash/MSYS converts D: to /d/.
 §
-Browser Chrome crash fix for Windows: If browser_navigate fails with "Chrome exited early / DevToolsActivePort", add browser args via Python yaml module. Chromium at C:\Users\afifs\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe.
-
-Indonesian news scraping: detik.com search most reliable. Use browser_console JS extraction for full article text. Direct URLs on kompas/cnnindonesia/cnbcindonesia frequently 404 — use tag pages or site search. Google blocks automated access — go to news sites directly.
+Cron job `run` cooldown: `cronjob(action='run')` silently does NOT trigger a run if the job recently completed (~1-2hr cooldown). Returns `success: true` but job stays "scheduled" and `last_run_at` unchanged. No error. Workaround: execute pipeline manually as main agent, or wait for cooldown.
 §
-Daily Market News skill: 8 Indonesian portals (kontan, bloombergtechnoz, katadata, bisnis.com [market+ekonomi], emitennews, stockwatch.id, investor.id, cnbcindonesia) + international (Yahoo Finance, Reuters, CNBC, Bloomberg, FXStreet, Kitco). cnbcindonesia URLs frequently 404 — verify first.
+Email Delivery (ACTIVE):
+- From: afif.sclit@gmail.com | To: ahmadafif.hariz@gmail.com
+- SMTP: smtp.gmail.com:465 TLS | IMAP: imap.gmail.com:993 TLS
+- Config: ~/.config/himalaya/config.toml (account: gmail)
+- Method: Python base64 → MIME temp file → `himalaya.exe message send --`
+- OLD harizcorp config DEPRECATED (SMTP blocked external delivery)

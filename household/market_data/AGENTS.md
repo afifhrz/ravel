@@ -73,15 +73,17 @@ Rubeeo's strategic_analysis_v2.md report MUST follow this structure:
    - Education Fund progress vs target
    - Pension Fund long-term trajectory
 3. Market Context (news-driven)
-4. Asset-by-Asset Analysis (each tagged with its goal bucket)
-5. Strategic Recommendations ("Move Your Asset") — each with goal-bucket rationale
+4. **Dividend Yield Analysis** — For each stock: forward dividend per share, yield %, annual income. Rank by yield. Identify avg-down candidates (high yield + strong fundamentals).
+5. Asset-by-Asset Analysis (each tagged with its goal bucket)
+6. Strategic Recommendations ("Move Your Asset") — each with goal-bucket rationale
 
 ---
 
 ## 3. UNIVERSAL CONSTRAINTS (System-Wide)
 
 ### Financial Constants:
-- **Stock Quantities:** All quantities in the master asset file are in **LOTS**. (1 Lot = 100 Shares).
+- **Stock Quantities:** All quantities in the master asset file are in **LOTS**. (1 Lot = 100 Shares). **Formula: market_value = lots × 100 × price. Do NOT multiply by 100 twice.**
+- **Mutual Fund Valuation:** Use NAV-based calculation. Cost basis = units × avg_nav. Market value = units × current_nav. P&L = (current_nav - avg_nav) × units. **Do NOT treat mutual funds as flat/at NAV.**
 - **Currency Base:** Primary reporting currency is **IDR**. Secondary reporting is **USD**.
 - **Exchange Rates:** Use live spot rates for all conversions.
 - **Education Cost Baseline:** Current Indonesian private university cost ≈ Rp150–250 million total per child (all-in). With 6% annual inflation: ~Rp350–600M by 2041, ~Rp390–660M by 2044.
@@ -91,6 +93,13 @@ Rubeeo's strategic_analysis_v2.md report MUST follow this structure:
 2. **Ravel** → Delivers News Summary → Telegram.
 3. **Rubeeo** → Analyzes Master Assets + Live Data + News → `strategic_analysis_v2.md`.
 4. **Ravel** → Delivers Strategic Summary → Telegram.
+5. **Ravel** → Sends full report as email attachment via Himalaya → `ahmadafif.hariz@gmail.com`.
+
+### Email Delivery:
+- **From**: `afif.sclit@gmail.com` (Gmail, App Password configured)
+- **To**: `ahmadafif.hariz@gmail.com`
+- **Method**: Build MIME message with base64-encoded attachment in Python, save to temp file, pipe to `himalaya.exe message send`
+- **Reference**: `skills/wealth-mgmt/weekly-wealth-analysis/references/himalaya-setup.md`
 
 ### Source of Truth:
-- Master Asset File: `C:\Users\afifs\AppData\Local\hermes\profiles\ravel\household\market_data\master_assets.json`
+- Master Asset File: `C:\\Users\\afifs\\AppData\\Local\\hermes\\profiles\\ravel\\household\\market_data\\master_assets.json`

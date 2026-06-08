@@ -100,6 +100,7 @@ folder.aliases.trash = "Trash"
 - **Composing/replying/forwarding** — piped input (`cat << EOF | himalaya template send`) is recommended for reliability. Interactive `$EDITOR` mode works with `pty=true` + background + process tool, but requires knowing the editor and its commands
 - Use `--output json` for structured output that's easier to parse programmatically
 - The `himalaya account configure` wizard requires interactive input — use PTY mode: `terminal(command="himalaya account configure", pty=true)`
+- **Windows/MSYS**: Himalaya installs to `~/.local/bin/himalaya.exe` which may not be in PATH. Set explicitly: `export PATH="/c/Users/<user>/AppData/Local/hermes/profiles/<profile>/home/.local/bin:$PATH"`
 
 ## Common Operations
 
@@ -155,7 +156,7 @@ To reply non-interactively from Hermes, read the original message, compose a rep
 
 ```bash
 # Get the reply template, edit it, and send
-himalaya template reply 42 | sed 's/^$/\nYour reply text here\n/' | himalaya template send
+himalaya template reply 42 | sed 's/^$/\\nYour reply text here\\n/' | himalaya template send
 ```
 
 Or build the reply manually:
@@ -255,6 +256,36 @@ himalaya --account work envelope list
 ```
 
 ## Attachments
+
+### Sending Attachments
+
+Use MML syntax with `template send`:
+
+```bash
+cat << 'EOF' | himalaya template send
+From: you@example.com
+To: recipient@example.com
+Subject: Report with Attachment
+
+Please find the report attached.
+
+<#part filename=/path/to/report.md name=report.md><#/part>
+EOF
+```
+
+**Important**: The `<#part>` tag must be self-closing with `<#/part>` immediately after — no content between tags. Use forward slashes in file paths even on Windows.
+
+If MML parsing fails, build raw MIME externally (e.g., Python `email` module) and pipe via `himalaya message send --`.
+
+### Spam Filter Issues
+
+If you get `550 SPAM` errors from the SMTP server:
+- Plain text emails usually pass; base64-encoded attachments often trigger spam filters
+- Self-hosted mail servers (cPanel, etc.) may lack SPF/DKIM/DMARC — external domains will reject
+- Test with plain text first, then send attachment separately
+- Gmail generally has the best deliverability — prefer Gmail SMTP when possible
+
+### Receiving/Save Attachments
 
 Save attachments from a message:
 

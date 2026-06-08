@@ -1,0 +1,26 @@
+[accounts.gmail]
+email = "afif.sclit@gmail.com"
+display-name = "OWL Wealth Reports"
+default = true
+
+backend.type = "imap"
+backend.host = "imap.gmail.com"
+backend.port = 993
+backend.encryption.type = "tls"
+backend.login = "afif.sclit@gmail.com"
+backend.auth.type = "password"
+backend.auth.raw = ""
+
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.gmail.com"
+message.send.backend.port = 465
+message.send.backend.encryption.type = "tls"
+message.send.backend.login = "afif.sclit@gmail.com"
+message.send.backend.auth.type = "password"
+message.send.backend.auth.raw = ""
+
+[accounts.gmail.folder.aliases]
+inbox = "INBOX"
+sent = "[Gmail]/Sent Mail"
+drafts = "[Gmail]/Drafts"
+trash = "[Gmail]/Trash"

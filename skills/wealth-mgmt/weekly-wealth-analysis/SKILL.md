@@ -32,10 +32,16 @@ Scheduled every Sunday at 08:00 WIB.
     - **Reporting Structure**: The report MUST include a Goal-Bucket Health Check section covering: Emergency Fund adequacy (months of expenses covered), Education Fund progress vs. 2041/2044 targets, and Pension Fund long-term trajectory.
     - Persona: Conservative Private Banker advising a father of two (son 4.5yo, daughter 1yo) planning for family's future across multiple time horizons.
 4. **Report Generation**: Save the full markdown report to `strategic_analysis_v2.md`.
-5. **Telegram Delivery**:
-    - Send a high-level executive summary to Telegram (P&L, top movers, 3 priority actions).
-    - **Attach the full `strategic_analysis_v2.md` file as a native document** — the user expects to read the professional report in full.
-    - Use `send_message` with the file path for the attachment.
+5. **Email Delivery (PRIMARY for file attachment)**:
+    - Use Himalaya CLI to send the full report as an email attachment
+    - Config: `~/.config/himalaya/config.toml` (account: `gmail`)
+    - From: `afif.sclit@gmail.com` | To: `ahmadafif.hariz@gmail.com`
+    - Subject: `Weekly Wealth Analysis Report — [date]`
+    - Build MIME message with MML attachment, save to temp file, pipe to `himalaya.exe message send`
+    - See `references/himalaya-setup.md` for the full send procedure
+6. **Telegram Delivery**:
+    - Send a high-level executive summary to Telegram (P&L, top movers, 3 priority actions)
+    - Paste a link to the full report or note that it was sent via email
 
 ## Verification
 - Report must explicitly reference news events from earlier in the week to justify the Sunday strategy.

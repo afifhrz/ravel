@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-06-07T08:00:00+07:00",
+  "news": [
+    {
+      "date": "2026-06-07",
+      "headline": "IHSG anjlok 4.2% ke 5,594.765, tekanan jual melanda sebagian besar sektor",
+      "summary": "Indeks Harga Saham Gabungan (IHSG) mencatat penurunan signifikan 4.2% ke level 5,594.765 pada perdagangan terakhir. Penurunan dipicu oleh sentimen global dan pelemahan sektor komoditas.",
+      "sentiment": "Bearish",
+      "related_assets": ["ADRO", "PTBA", "AADI", "ASII", "UNTR", "MYOH"],
+      "url": "https://www.cnbcindonesia.com/market"
+    },
+    {
+      "date": "2026-06-07",
+      "headline": "Harga emas spot turun 3.3% ke US$4.353/oz, data ketenagakerjaan AS kuat",
+      "summary": "Harga emas mengalami penurunan harian terbesar sejak Maret, anjlok 3.3% ke US$4.353 per ons setelah data ketenagakerjaan AS yang jauh lebih kuat dari perkiraan mengurangi peluang pemangkasan suku bunga dan mendorong penguatan dolar AS. Emas spot di level Rp2.518.344/gram.",
+      "sentiment": "Bearish",
+      "related_assets": ["GOLD"],
+      "url": "https://www.hargaemas.com/"
+    },
+    {
+      "date": "2026-06-07",
+      "headline": "USD/IDR menguat ke Rp18.035, dolar AS menguat pasca data NFP AS",
+      "summary": "Nilai tukar USD/IDR menguat ke level Rp18.035, didorong oleh penguatan dolar AS secara global setelah data ketenagakerjaan AS yang lebih kuat dari ekspektasi. GBP/IDR di Rp24.032, CNY/IDR di Rp2.666, SGD/IDR di Rp13.974.",
+      "sentiment": "Bearish",
+      "related_assets": ["GBP", "CNY", "SGD", "USD"],
+      "url": "https://finance.yahoo.com/quote/IDR=X/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "Emiten angkutan batu bara amankan kontrak jangka panjang di tengah gejolak dunia",
+      "summary": "Perusahaan-perusahaan angkutan batu bara mengamankan kontrak jangka panjang untuk menghadapi ketidakpastian global. Sektor batu bara tetap menjadi penggerak utama bagi emiten seperti ADRO, PTBA, dan MYOH.",
+      "sentiment": "Neutral",
+      "related_assets": ["ADRO", "PTBA", "MYOH"],
+      "url": "https://www.cnbcindonesia.com/market"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "Perang bikin harga BBM naik, bisnis logistik incar kendaraan listrik",
+      "summary": "Kenaikan harga BBM akibat konflik global mendorong bisnis logifikasi beralih ke kendaraan listrik. Sektor otomotif dan manufaktur seperti ASII dan UNTR bisa terdampak oleh pergeseran ini.",
+      "sentiment": "Neutral",
+      "related_assets": ["ASII", "UNTR"],
+      "url": "https://www.cnbcindonesia.com/market"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "AADI (Adaro Andalan Indonesia) turun 5.61% ke Rp7.575, tekanan jual besar",
+      "summary": "Saham AADI mengalami penurunan signifikan 5.61% ke Rp7.575 dengan volume perdagangan 24.58 juta saham. Pelemahan dipicu oleh sentimen negatif terhadap sektor batu bara dan profit taking setelah kenaikan sebelumnya.",
+      "sentiment": "Bearish",
+      "related_assets": ["AADI"],
+      "url": "https://finance.yahoo.com/quote/AADI.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "UNTR turun 3.41% ke Rp21.250, sektor alat berat tertekan",
+      "summary": "Saham United Tractors (UNTR) turun 3.41% ke Rp21.250. Sektor alat berat mengalami tekanan menjelang pertengahan tahun dengan ekspektasi permintaan yang melambat.",
+      "sentiment": "Bearish",
+      "related_assets": ["UNTR"],
+      "url": "https://finance.yahoo.com/quote/UNTR.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "KMDS naik 3.92% ke Rp530, eks-dividend date 4 Juni 2026",
+      "summary": "Saham KMDS mencatatkan kenaikan 3.92% ke Rp530. Perdagangan terakhir sebelum ex-dividend date pada 4 Juni 2026 dengan dividen Rp42 per saham (yield 7.92%).",
+      "sentiment": "Bullish",
+      "related_assets": ["KMDS"],
+      "url": "https://finance.yahoo.com/quote/KMDS.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "SIDO di level terendah 52 minggu Rp364, konsumen tetap belanja jamu",
+      "summary": "Saham SIDO menyentuh level terendah 52-minggu di Rp364. Meskipun demikian, fundamental perusahaan jamu dan farmasi ini tetap solid dengan pendapatan TTM Rp3.93 triliun dan laba bersih yang stabil.",
+      "sentiment": "Bearish",
+      "related_assets": ["SIDO"],
+      "url": "https://finance.yahoo.com/quote/SIDO.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "ASII turun 1.30% ke Rp4.570, Astra ex-dividend 5 Mei 2026",
+      "summary": "Saham ASII turun 1.30% ke Rp4.570. Perusahaan telah membayarkan dividen Rp390 per saham (yield 8.53%) dengan ex-date 5 Mei 2026. Earnings date diperkirakan 30 Juli 2026.",
+      "sentiment": "Neutral",
+      "related_assets": ["ASII"],
+      "url": "https://finance.yahoo.com/quote/ASII.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "PTBA turun 2.63% ke Rp2.590, yield dividen tertinggi portofolio 12.84%",
+      "summary": "Saham PTBA turun 2.63% ke Rp2.590. Meskipun harga turun, PTBA menawarkan yield dividen tertinggi di portofolio sebesar 12.84% dengan forward dividen Rp332.44 per saham.",
+      "sentiment": "Neutral",
+      "related_assets": ["PTBA"],
+      "url": "https://finance.yahoo.com/quote/PTBA.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "RIGS turun 2.26% ke Rp650, rig tender menghadapi tantangan",
+      "summary": "Saham RIGS turun 2.26% ke Rp650. Perusahaan rig tender ini tidak membayarkan dividen sejak 2009 dan menghadapi tantangan struktural di sektor minyak dan gas.",
+      "sentiment": "Bearish",
+      "related_assets": ["RIGS"],
+      "url": "https://finance.yahoo.com/quote/RIGS.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "IKBI turun 2.01% ke Rp488, sektor kabel lesu",
+      "summary": "Saham IKBI turun 2.01% ke Rp488. Sektor kabel menghadapi tekanan dari perlambatan proyek infrastruktur dan persaingan harga.",
+      "sentiment": "Bearish",
+      "related_assets": ["IKBI"],
+      "url": "https://finance.yahoo.com/quote/IKBI.JK/"
+    },
+    {
+      "date": "2026-06-05",
+      "headline": "MYOH naik 1.47% ke Rp1.035, satu-satunya penguat hari itu",
+      "summary": "Saham MYOH mencatatkan kenaikan 1.47% ke Rp1.035, menjadi salah satu dari sedikit saham yang menguat. Volume perdagangan rendah di 26.200 saham.",
+      "sentiment": "Bullish",
+      "related_assets": ["MYOH"],
+      "url": "https://finance.yahoo.com/quote/MYOH.JK/"
+    }
+  ]
+}
